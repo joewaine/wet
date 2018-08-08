@@ -2043,17 +2043,18 @@ body{
   overflow-x: hidden;
 }
 
-
 .social-links{
     float: right;
     clear: both;
 }
 
-
-
 .social-links li,
 .supporter-links li{
   display: inline-block;
+}
+
+.social-links li{
+  text-align: center;
 }
 
 .social-links li img,
@@ -2517,4 +2518,15 @@ h2.blog-post-title a,
 h1.blog-post-title a {
     color: #000;
     font-size: 47px;
+}
+
+
+.social-icon-white{
+  width: 30px;
+height: 30px;
+}
+
+
+.social-links{
+    padding-right: 10px;
 }

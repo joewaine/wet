@@ -119,7 +119,7 @@
 
 <li>
   <button class="cta-button magenta btn btn-default donate-button">
-<a href="/tickets">
+<a target="_blank" href="<?php the_field('ticketing_link', 'option'); ?>">
 tickets</a>
 </button>
 </li>

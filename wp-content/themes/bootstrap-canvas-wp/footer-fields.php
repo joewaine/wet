@@ -34,14 +34,47 @@ info@washingtonensemble.org
 
 
 
+
+
+
+<?php if( have_rows('social_links', 'option') ): ?>
+
+
 <ul class="social-links">
-  <li><img src="http://localhost:8888/wp-content/themes/bootstrap-canvas-wp/img/logo.jpg" alt=""></li>
-  <li><img src="http://localhost:8888/wp-content/themes/bootstrap-canvas-wp/img/logo.jpg" alt=""></li>
-  <li><img src="http://localhost:8888/wp-content/themes/bootstrap-canvas-wp/img/logo.jpg" alt=""></li>
-  <li><img src="http://localhost:8888/wp-content/themes/bootstrap-canvas-wp/img/logo.jpg" alt=""></li>
-  <li><img src="http://localhost:8888/wp-content/themes/bootstrap-canvas-wp/img/logo.jpg" alt=""></li>
+    <?php while( have_rows('social_links', 'option') ): the_row(); ?>
+
+
+
+
+
+<?php include 'social-repeater-logic.php' ?>
+
+
+
+
+    <?php endwhile; ?>
 
 </ul>
+
+<?php endif; ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </div>
