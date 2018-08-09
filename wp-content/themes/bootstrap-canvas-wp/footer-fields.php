@@ -6,13 +6,12 @@
 <div class="container">
 <div class="row">
 <div class="col-sm-4">
+<?php if( have_rows('bottom_left_footer_info_line_repeater', 'option') ): ?>
+    <?php while( have_rows('bottom_left_footer_info_line_repeater', 'option') ): the_row(); ?>
+      <?php include 'bottom_left_footer_info_line_repeater.php' ?>
+    <?php endwhile; ?>
+<?php endif; ?>
 
-Washington Ensemble Theatre<br/>
-PO Box 20834<br/>
-Seattle, WA 98102-1834<br/>
-(206) 325-5105<br/>
-washingtonensemble.org<br/>
-info@washingtonensemble.org
 </div>
 
 <div class="col-sm-8">
@@ -38,24 +37,11 @@ info@washingtonensemble.org
 
 
 <?php if( have_rows('social_links', 'option') ): ?>
-
-
 <ul class="social-links">
     <?php while( have_rows('social_links', 'option') ): the_row(); ?>
-
-
-
-
-
-<?php include 'social-repeater-logic.php' ?>
-
-
-
-
+      <?php include 'social-repeater-logic.php' ?>
     <?php endwhile; ?>
-
 </ul>
-
 <?php endif; ?>
 
 
@@ -88,31 +74,22 @@ info@washingtonensemble.org
 Generously supported by:
 <br/>
 
-<ul class="supporter-links">
-  <li><img src="http://localhost:8888/wp-content/themes/bootstrap-canvas-wp/img/logo.jpg" alt=""></li>
-  <li><img src="http://localhost:8888/wp-content/themes/bootstrap-canvas-wp/img/logo.jpg" alt=""></li>
-  <li><img src="http://localhost:8888/wp-content/themes/bootstrap-canvas-wp/img/logo.jpg" alt=""></li>
-  <li><img src="http://localhost:8888/wp-content/themes/bootstrap-canvas-wp/img/logo.jpg" alt=""></li>
-  <li><img src="http://localhost:8888/wp-content/themes/bootstrap-canvas-wp/img/logo.jpg" alt=""></li>
-
-</ul>
-<?php if( have_rows('footer_nav', 'option') ): ?>
 
 
 
-    <?php while( have_rows('footer_nav', 'option') ): the_row(); ?>
-
-
-
-<?php include 'menu-repeater-logic.php' ?>
-
-
-
-
+<?php if( have_rows('supporter_links_and_images', 'option') ): ?>
+<div class="supporter-links">
+    <?php while( have_rows('supporter_links_and_images', 'option') ): the_row(); ?>
+      <?php include 'supporter-repeater-logic.php' ?>
     <?php endwhile; ?>
+</div>
+<?php endif; ?>
 
 
-
+<?php if( have_rows('footer_nav', 'option') ): ?>
+    <?php while( have_rows('footer_nav', 'option') ): the_row(); ?>
+      <?php include 'menu-repeater-logic.php' ?>
+    <?php endwhile; ?>
 <?php endif; ?>
 
 

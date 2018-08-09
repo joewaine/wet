@@ -24,7 +24,7 @@ hr {
   }
 
 body{
-  font-size: 18px;
+  font-size: 16px;
 }
 
 
@@ -499,7 +499,7 @@ body.logged-in{
 
 .nav-menu{
     background-color: transparent;
-    margin-top: 42px;
+    margin-top: 40px;
     float: right;
 }
 
@@ -1721,6 +1721,10 @@ display: block;
 }
 
 
+.col-sm-4.right-column-contact{
+  display: none;
+}
+
 
 
 
@@ -1802,6 +1806,15 @@ span.big-quote-author{
   .half-width-area{
     width: 100%;
   }
+
+
+
+.site-footer #primary-menu{
+  display: none;
+}
+
+
+
 }
 
 
@@ -2048,17 +2061,43 @@ body{
     clear: both;
 }
 
-.social-links li,
-.supporter-links li{
+.social-links li{
   display: inline-block;
+}
+
+
+.supporter-links li{
+  display: inline-flex;
+}
+
+.supporter-links li a img{
+height: 40px;
+}
+
+
+
+.supporter-links{
+  width: 100%;
+}
+
+
+.supporter{
+  width: 16.66%;
+  float: left;
+  text-align: center;
+}
+
+
+.supporter a img{
+  height: 60px;
 }
 
 .social-links li{
   text-align: center;
+  width: 40px;
 }
 
-.social-links li img,
-.supporter-links li img{
+.social-links li img{
   width: 20px;
   height: 20px;
 }
@@ -2077,8 +2116,9 @@ body{
 
 
 .full-width-headline{
+background-repeat: no-repeat;
+background-position: center center;
 
-background: url('https://static.seattletimes.com/wp-content/uploads/2017/11/11aad8ac-cb00-11e7-8547-fc55c536bde7-1020x544.jpg') no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -2464,14 +2504,16 @@ display: none;
 
 
 button.btn.btn-default{
-background: black;
+    background: black;
     color: white;
     border: 0;
     border-radius: 0;
-    padding: 10px 30px;
+    padding: 5px 25px;
     line-height: 30px;
-    padding-top: 14px;
-  font-size: 16px;
+    padding-top: 8px;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 
@@ -2529,4 +2571,70 @@ height: 30px;
 
 .social-links{
     padding-right: 10px;
+}
+
+
+@media only screen and (max-width: 1280px) {
+.supporter{
+  width: 33.33%;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+}
+
+
+.one-quarter .panel-info{
+  width: 90%;
+}
+
+@media only screen and (max-width: 960px) {
+.supporter{
+  width: 50%;
+}
+
+.supporter a img {
+    height: 40px;
+}
+
+.one-third .panel-info,
+.one-quarter .panel-info,
+.one-half .panel-info,
+.two-third .panel-info {
+    width: 80%;
+}
+}
+
+
+@media only screen and (max-width: 860px) {
+  .social-links{
+    float: left;
+  }
+
+
+.site-footer ul.social-links{
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.site-footer hr{
+  margin-top: 24px;
+  margin-bottom: 30px;
+}
+
+}
+
+.right-column-contact .social-links{
+  float: left;
+  padding-left: 0;
+}
+
+.right-column-contact .social-links li {
+    text-align: left;
+}
+
+
+#primary-menu button.btn.btn-default{
+    margin-top: 3px;
+    margin-left: 5px;
 }

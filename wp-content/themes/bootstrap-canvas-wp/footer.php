@@ -193,5 +193,22 @@ $( ".selector" ).accordion( "option", "autoHeight", false );
 
 </script>
 
+
+
+
+<script>
+
+$('.social-links.right-bar img').each(function(){
+
+
+$(this).attr('src', $(this).attr('src').replace('.svg', '-black.svg'));
+
+
+});
+
+
+</script>
+
+
   </body>
 </html>

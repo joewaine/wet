@@ -153,16 +153,19 @@ tickets</a>
 
 <div class="col-sm-4">
   <h4>Keep up with the ensemble</h4>
-  <button><a href="">join our mailing list</a></button>
+  <button><a target="_blank" href="<?php the_field('mailing_list_link', 'option'); ?>">join our mailing list</a></button>
   <h4>social media</h4>
-<ul class="social-links">
-  <li><img src="http://localhost:8888/wp-content/themes/bootstrap-canvas-wp/img/logo.jpg" alt=""></li>
-  <li><img src="http://localhost:8888/wp-content/themes/bootstrap-canvas-wp/img/logo.jpg" alt=""></li>
-  <li><img src="http://localhost:8888/wp-content/themes/bootstrap-canvas-wp/img/logo.jpg" alt=""></li>
-  <li><img src="http://localhost:8888/wp-content/themes/bootstrap-canvas-wp/img/logo.jpg" alt=""></li>
-  <li><img src="http://localhost:8888/wp-content/themes/bootstrap-canvas-wp/img/logo.jpg" alt=""></li>
 
+
+<?php if( have_rows('social_links', 'option') ): ?>
+<ul class="social-links">
+    <?php while( have_rows('social_links', 'option') ): the_row(); ?>
+      <?php include 'social-repeater-logic.php' ?>
+    <?php endwhile; ?>
 </ul>
+<?php endif; ?>
+
+
 
     </div>
 
@@ -175,46 +178,8 @@ tickets</a>
 
 
 
-<section class="blog">
-<div class="container">
-<div class="col-sm-8">
-  <br>
-<ul class="blog-posts">
-<?php
-
-global $post;
-$args = array( 'posts_per_page' => 5, 'offset'=> 1, 'category' => 1 );
-
-$myposts = get_posts( $args );
-foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
-  <li>
-    <?php the_post_thumbnail(); ?>
-    <h1 class="blog-post-title">
-    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-    </h1>
-    <br>
-<span class="post-info"><?php the_date(); ?>&nbsp;<?php the_author();?></span>
-    <br>    <br>
-    <?php the_excerpt(); ?>
-    <br>
-    <button><a href="<?php the_permalink(); ?>">READ MORE</a></button>
-    <hr>
-  </li>
-<?php endforeach;
-wp_reset_postdata();?>
-
-</ul>
-
-</div>
-<div class="col-sm-4">
 
 
-<h1>categories</h1>
-<?php wp_list_categories(); ?>
-<h1>tags</h1>
-<?php get_tags(); ?>
 
 
-</div>
-</div>
-</section>
+
