@@ -49,86 +49,48 @@
 
 
 
-<div class="staff-modal">
-
-<div class="content">
-
-
-<div class="clearfix">
-    <div style="float: left;" class="clearfix left-mod-col">
-
-<img src="" alt="">
-
-
-
+    <div class="staff-modal">
+      <div class="content">
+        <div class="clearfix">
+          <div style="float: left;" class="clearfix left-mod-col">
+            <img src="" alt="">
+          </div>
+          <!-- No Clearing div! -->
+          <div class="right-mod-col">
+            <h2>
+              <span class="first-name"></span>&nbsp;
+              <span class="last-name"></span>
+            </h2>
+            <p class="description"></p>
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- No Clearing div! -->
-
-<div class="right-mod-col">
-
-  <h2>
-    <span class="first-name"></span>&nbsp;
-<span class="last-name"></span>
-  </h2>
-
-
-  <p class="description"></p>
-
-
-
-</div>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-</div>
-
-</div>
     <nav id="site-navigation" class="navigation main-navigation" role="navigation">
       <div class="container">
-
-
-
-<a href="<?php echo get_home_url() ?>">
-<img class="wet-logo" src="<?php echo get_template_directory_uri() ?>/img/logo.jpg" alt="">
-</a>
-      <ul id="primary-menu" class="nav-menu">
-	<?php
-       	  wp_nav_menu( array(
-	    'theme_location' => 'primary',
-	    'menu_class'     => 'primary-menu',
-	    'container'      => 'false',
-	    'items_wrap'     => '%3$s',
-	    'fallback_cb'    => 'bootstrap_canvas_wp_menu_fallback',
-	  ) );
-	?>
-
-	<li class="menu-toggle">
-          <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
-	</li>
-
-
-<li>
-  <button class="cta-button magenta btn btn-default donate-button">
-<a target="_blank" href="<?php the_field('ticketing_link', 'option'); ?>">
-tickets</a>
-</button>
-</li>
-      </ul>
+        <a class="logo-link" href="<?php echo get_home_url() ?>">
+          <img class="wet-logo" src="<?php echo get_template_directory_uri() ?>/img/logo.jpg" alt="">
+        </a>
+        <a class="menu-toggle" href="javascript:void(0);" onclick="toggleResponsive()">&#9776;</a>
+        <ul id="primary-menu" class="nav-menu">
+        	<?php
+               	  wp_nav_menu( array(
+        	    'theme_location' => 'primary',
+        	    'menu_class'     => 'primary-menu',
+        	    'container'      => 'false',
+        	    'items_wrap'     => '%3$s',
+        	    'fallback_cb'    => 'bootstrap_canvas_wp_menu_fallback',
+        	  ) );
+        	?>
+          <li>
+            <button class="cta-button magenta btn btn-default donate-button">
+              <a target="_blank" href="<?php the_field('ticketing_link', 'option'); ?>">tickets</a>
+            </button>
+          </li>
+        </ul>
       </div>
     </nav><!-- #site-navigation -->
 <?php include 'advanced-custom-fields.php'; ?>
-
-
 
 <section style="display:none;">
 <div class="text-body">

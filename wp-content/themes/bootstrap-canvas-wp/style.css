@@ -256,24 +256,38 @@ a img.aligncenter {
   border-left: 5px solid transparent;
 }*/
 
-.nav-menu .menu-toggle {
+a.menu-toggle {
     display: none;
 }
 
-@media screen and (max-width:768px) {
-    .nav-menu li:not(:first-child) {
-	display: none;
+@media screen and (max-width:860px) {
+/*    .nav-menu li:not(:first-child) {
+	   display: none;
+    }*/
+    .nav-menu li {
+     display: none;
     }
-
-    .nav-menu li.menu-toggle {
-	float: right;
-	display: block;
+    a.menu-toggle {
+     display: block;
+	   color: black;
+     font-size: 32px;
+     float: right;
+     margin-top: 45px;
+     padding-right: 15px;
+     text-transform: none;
+     text-decoration: none;
     }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:860px) {
+    .nav-menu {
+      display: none;
+    }
+    
     .nav-menu.responsive {
-	position: relative;
+	   position: relative;
+     margin-top: 0;
+     width: 100%;
     }
 
     .nav-menu.responsive .menu-toggle {
@@ -288,8 +302,12 @@ a img.aligncenter {
     }
 
     .nav-menu.responsive li a {
-  	display: block;
-    	text-align: left;
+	   display: block;
+     text-align: center;
+    }
+
+    .nav-menu.responsive button.cta-button {
+      width: 100%;
     }
 }
 
@@ -467,24 +485,22 @@ body.logged-in{
 }
 
 #site-navigation{
-    background: white;
-    height: 130px;
-    -webkit-box-shadow: inset 0 0px 0px rgba(0,0,0,0);
-    box-shadow: inset 0 0px 0px rgba(0,0,0,0);
-    font-family: 'Avenir LT Std 55 Roman';
-        padding-left: 15px;
-    padding-right: 15px;
-
-    border-bottom: 1px solid black;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-
-
+  background: white;
+  height: 130px;
+  -webkit-box-shadow: inset 0 0px 0px rgba(0,0,0,0);
+  box-shadow: inset 0 0px 0px rgba(0,0,0,0);
+  font-family: 'Avenir LT Std 55 Roman';
+  border-bottom: 1px solid black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
-
+.logo-link {
+  display: inline-block;
+  padding-left: 15px;
+}
 
 .nav-menu > li > a,
 .nav-menu > li > a:hover,
@@ -500,6 +516,7 @@ body.logged-in{
 .nav-menu{
     background-color: transparent;
     margin-top: 40px;
+    padding-right: 15px;
     float: right;
 }
 
@@ -2327,7 +2344,7 @@ background-color: green;
 }
 
 .basic-page-content .container{
-      padding: 70px 15px;
+  padding: 30px 15px;
 }
 
 
@@ -2574,6 +2591,24 @@ height: 30px;
 }
 
 
+
+.basic-page-content h1{
+  font-size: 72px;
+  font-weight: 600;
+}
+
+
+
+.ensemble{
+margin-bottom:20px;font-weight: bold;
+}
+
+.soc-med{
+  margin-bottom:20px;margin-top:26px;font-weight: bold;
+}
+
+
+
 @media only screen and (max-width: 1280px) {
 .supporter{
   width: 33.33%;
@@ -2608,19 +2643,18 @@ height: 30px;
 
 @media only screen and (max-width: 860px) {
   .social-links{
-    float: left;
+      float: left;
   }
 
+  .site-footer ul.social-links{
+      padding-bottom: 0;
+      margin-bottom: 0;
+  }
 
-.site-footer ul.social-links{
-    padding-bottom: 0;
-    margin-bottom: 0;
-}
-
-.site-footer hr{
-  margin-top: 24px;
-  margin-bottom: 30px;
-}
+  .site-footer hr{
+    margin-top: 24px;
+    margin-bottom: 30px;
+  }
 
 }
 
