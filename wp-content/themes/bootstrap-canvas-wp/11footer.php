@@ -121,17 +121,20 @@ paragraphcontent = paragraphcontent + paragraphpiece;
 
 });
 
-var contentItem = '<div class="container staff-content"><div class="row"><div class="col-md-5"><img class="gray-border usrImage" src="'+ $(this).find('img').attr('src') +'"></div><div class="col-sm-7"><h2 class="staff-member-modal">'+ $(this).find('.staff-member-name').text() +'</h2><p class="gray-text gray-border">'+ $(this).find('.top-text').text() +'</p>' + paragraphcontent + '</div></div></div>';
+var contentItem = '<div class="container"><div class="row"><div class="col-md-5" style="display:none;"><img class="gray-border usrImage" src="'+ $(this).find('img').attr('src') +'" style="display:none;"></div><div class="col-sm-7"><h2 class="staff-member-modal">'+ $(this).find('.staff-member-name').text() +'</h2><p class="gray-text gray-border">'+ $(this).find('.top-text').text() +'</p>' + paragraphcontent + '</div></div></div>';
 
 $('.staff-member:eq('+ appender +')').after('<div class="member-info-data" style="display:none;">' + contentItem + '</div>');
-$('.staff-member:eq('+ appender +')').next(".member-info-data").show();
-$(".member-info-data .container.staff-content .row").addClass('showing')
+$('.staff-member:eq('+ appender +')').next(".member-info-data").slideDown();
 
-// $('.member-info-data').addClass('appear').addClass('giveHeight');
-// $(".member-info-data .container").addClass('slide-down');
+$('.member-info-data').addClass('appear').addClass('giveHeight');
+$(".member-info-data .container").addClass('slide-down');
 
+setTimeout(function (){
 
-
+$('.usrImage').fadeIn(1000);
+$('.col-md-5').slideDown(500);
+// $('.col-sm-7').slideDown('slow');
+}, 100);
    result = null;
         break;
     }

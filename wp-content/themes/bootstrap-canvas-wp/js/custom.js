@@ -6,17 +6,17 @@ function toggleResponsive() {
     } else {
         x.className = "nav-menu";
     }
-    menu.slideToggle( "fast", function() {
-		// Done!
-	});
+    if(menu.hasClass('responsive')){
+        menu.slideDown('fast');
+    } else {
+        menu.slideUp();
+    }
 }
 
-// (function ($) {
-//   $(document).ready(function () {
-//   	$('.menu-toggle').on('click touch', function(){
-// 		$('.nav-menu').slideToggle( "fast", function() {
-// 			toggleResponsive();
-// 		});
-//   	});
-//   });
-// }) (jQuery);
+$( window ).resize(function() {
+  if ($(window).width() > 860) {
+    if($('#primary-menu').css('display') == 'none'){
+        $('#primary-menu').css('display', 'block');
+    }
+  }
+});

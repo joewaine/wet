@@ -18,7 +18,7 @@ if( get_row_layout() == 'full_width_hero'){
   include '1-1-hero.php';
 }elseif( get_row_layout() == '1_1_1_1_hero'){
   include '1-1-1-1-hero.php';
-}elseif( get_row_layout() == 'staff_module_slide'){
+}elseif( get_row_layout() == 'staff_module'){
   include 'staff-module-slide.php';
 }elseif( get_row_layout() == 'basic_page_content'){
   include 'basic-page-content.php';

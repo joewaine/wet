@@ -1,112 +1,46 @@
-<section class="">
+
+<?php
+
+$staff_module = get_sub_field('staff_module');
+
+if( $staff_module ){?>
+<section class="staff-info">
 <div class="container staff-groupings">
-    <div id="liuzzi" class="staff-member" style="background-image: url(http://portland.carpediem.cd/data/afisha/o/d4/4a/d44a42053f.jpg);">
-<div class="info">
-                        <h1 class="white staff-member-name gray-border">
-                       Rachel Liuzzi                       </h1>
+
+<?php
+
+$arr = $staff_module;
+$i = 0;
+foreach ($arr as &$value) {?>
 
 
-                        <span class="employee-description"><p>
-Lorem Ipsum
-                       </span>
+<div id="<?php echo $value['last_name']; ?>" class="staff-member" style="background: url(<?php echo $value['image']; ?>) no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+
+<img src="<?php echo $value['image']; ?>" style="display:none;">
+
+
+
+<div class="info"><h1 class="white staff-member-name gray-border">
+<?php echo $value['first_name']; ?>&nbsp;<?php echo $value['last_name']; ?>
+</h1><span class="employee-description"><p>
+<?php echo $value['description']; ?>
+</span></div></div>
+
+
+<?php $i++; }?>
+
 </div>
-                      </div>
-
-                          <div id="waine" class="staff-member" style="background-image: url(https://78.media.tumblr.com/c7e13512e75fee5d1e02ffc4184e2cae/tumblr_ozxt2li5YA1qc0vmuo1_1280.jpg
-);">
-<div class="info">
-                        <h1 class="white staff-member-name gray-border">
-               Joe Waine                     </h1>
-
-
-                        <span class="employee-description"><p>
-Lorem Ipsum
-                       </span>
-</div>
-                      </div>
-
-
-    <div id="liuzzi" class="staff-member" style="background-image: url(http://portland.carpediem.cd/data/afisha/o/d4/4a/d44a42053f.jpg);">
-<div class="info">
-                        <h1 class="white staff-member-name gray-border">
-                       Rachel Liuzzi                       </h1>
-
-
-                        <span class="employee-description"><p>
-Lorem Ipsum
-                       </span>
-</div>
-                      </div>
-
-                          <div id="waine" class="staff-member" style="background-image: url(https://78.media.tumblr.com/c7e13512e75fee5d1e02ffc4184e2cae/tumblr_ozxt2li5YA1qc0vmuo1_1280.jpg
-);">
-<div class="info">
-                        <h1 class="white staff-member-name gray-border">
-               Joe Waine                     </h1>
-
-
-                        <span class="employee-description"><p>
-Lorem Ipsum
-                       </span>
-</div>
-                      </div>
-
-    <div id="liuzzi" class="staff-member" style="background-image: url(http://portland.carpediem.cd/data/afisha/o/d4/4a/d44a42053f.jpg);">
-<div class="info">
-                        <h1 class="white staff-member-name gray-border">
-                       Rachel Liuzzi                       </h1>
-
-
-                        <span class="employee-description"><p>
-Lorem Ipsum
-                       </span>
-</div>
-                      </div>
-
-                          <div id="waine" class="staff-member" style="background-image: url(https://78.media.tumblr.com/c7e13512e75fee5d1e02ffc4184e2cae/tumblr_ozxt2li5YA1qc0vmuo1_1280.jpg
-);">
-<div class="info">
-                        <h1 class="white staff-member-name gray-border">
-               Joe Waine                     </h1>
-
-
-                        <span class="employee-description"><p>
-Lorem Ipsum
-                       </span>
-</div>
-                      </div>
-
-    <div id="liuzzi" class="staff-member" style="background-image: url(http://portland.carpediem.cd/data/afisha/o/d4/4a/d44a42053f.jpg);">
-<div class="info">
-                        <h1 class="white staff-member-name gray-border">
-                       Rachel Liuzzi                       </h1>
-
-
-                        <span class="employee-description"><p>
-Lorem Ipsum
-                       </span>
-</div>
-                      </div>
-
-                          <div id="waine" class="staff-member" style="background-image: url(https://78.media.tumblr.com/c7e13512e75fee5d1e02ffc4184e2cae/tumblr_ozxt2li5YA1qc0vmuo1_1280.jpg
-);">
-<div class="info">
-                        <h1 class="white staff-member-name gray-border">
-               Joe Waine                     </h1>
-
-
-                        <span class="employee-description"><p>
-Lorem Ipsum
-                       </span>
-</div>
-                      </div>
-
-
-
-
-
-
-
-
-                                       </div>
 </section>
+
+
+
+
+
+
+
+
+
+
+<?php } ?>
+
+
