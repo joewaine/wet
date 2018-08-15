@@ -534,8 +534,8 @@ body.logged-in{
 
 
 .container{
-width: 100% !important;
-padding: 0;
+  width: 100% !important;
+  padding: 0;
 }
 
 
@@ -1490,24 +1490,36 @@ button.donate-button{
 
 }
 
+/* ===== Staff ACF Module BEGIN ===== */
 
-.staff-module{
+.staff-module {
   background: white;
   padding-top: 40px;
   padding-bottom: 40px;
 }
 
-
-.staff-member{
-    width: 25%;
-    margin-bottom: 0;
-    background: transparent;
-    float: left;
-    padding-bottom: 34px;
-    height: 400px;
+.staff-info .member-info-data {
+  display: inline-block;
 }
 
+.staff-info .member-info-data .container.staff-content {
+  display: block;
+  margin: 25px auto;
+  width: 75% !important;
+}
 
+.staff-info .member-info-data .container.staff-content .staff-desc-wrapper {
+  margin-top: 40px;
+}
+
+.staff-member {
+  width: 25%;
+  margin-bottom: 0;
+  background: transparent;
+  float: left;
+  padding-bottom: 34px;
+  height: 400px;
+}
 
 .staff-member.open-position-item{
   width: 100%;
@@ -1515,10 +1527,10 @@ button.donate-button{
 }
 
 .staff-panel{
-    background: #f6f6f6;
-    width: 256px;
-    padding-bottom: 36px;
-        margin: 0 auto;
+  background: #f6f6f6;
+  width: 256px;
+  padding-bottom: 36px;
+  margin: 0 auto;
 }
 
 .staff-panel.resource-panel{
@@ -1526,13 +1538,9 @@ button.donate-button{
     padding-top: 32px;
 }
 
-
 .staff-panel.resource-panel.open-positions{
     border: 6px solid #FABD15;
 }
-
-
-
 
 .staff-member img{
   width: 256px;
@@ -1548,16 +1556,15 @@ button.donate-button{
 .staff-member span,
 .staff-member .first-name,
 .staff-member .last-name{
-    font-family: 'Leafy';
-    color: #253A8F;
-    font-size: 28px;
-    line-height: 32px;
-    letter-spacing: 3.43px;
-    margin-top: 0px;
-    max-width: 180px;
-    margin: 10px auto 14px;
+  font-family: 'Leafy';
+  color: #253A8F;
+  font-size: 28px;
+  line-height: 32px;
+  letter-spacing: 3.43px;
+  margin-top: 0px;
+  max-width: 180px;
+  margin: 10px auto 14px;
 }
-
 
 .first-name{
   margin-bottom: 0 !important;
@@ -1567,17 +1574,17 @@ button.donate-button{
 }
 
 .staff-member .learn-more{
-    margin-left: 40px;
-    margin-right: 40px;
-    color: #000;
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: 2px;
-    font-family: 'Avenir Black';
-    text-transform: uppercase;
-    border-bottom: 4px solid #2CA6FF;
-    padding-bottom: 2px;
-    display: inline-table;
+  margin-left: 40px;
+  margin-right: 40px;
+  color: #000;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 2px;
+  font-family: 'Avenir Black';
+  text-transform: uppercase;
+  border-bottom: 4px solid #2CA6FF;
+  padding-bottom: 2px;
+  display: inline-table;
 }
 
 
@@ -1587,13 +1594,13 @@ button.donate-button{
 }
 
 .staff-member .info{
-    background: rgba(0,0,0,.5);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    -webkit-transition: opacity .5s; /* Safari */
-    transition: opacity .5s;
+  background: rgba(0,0,0,.5);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transition: opacity .5s; /* Safari */
+  transition: opacity .5s;
 }
 
 .staff-member .info:hover{
@@ -1602,35 +1609,44 @@ button.donate-button{
 
 
 .staff-member .info h1{
-    position: absolute;
-    bottom: 3px;
-    color: white;
-    left: 20px;
+  position: absolute;
+  bottom: 3px;
+  color: white;
+  left: 10px;
+  font-size: 30px;
 }
-
 
 .learn-more:hover{
-text-decoration: none;
+  text-decoration: none;
 }
+
+/*@media only screen and (max-width: 991px) {
+
+  .staff-info .member-info-data .container.staff-content .staff-desc-wrapper {
+    margin-top: 10px;
+  } 
+  .staff-info .member-info-data .container.staff-content img {
+    display: block;
+    margin: 0 auto;  
+  }
+  .staff-info .member-info-data .container.staff-content h2 {
+    text-align: center;
+  }
+}*/
 
 @media only screen and (max-width: 860px) {
+  .staff-modal .content{
+    width: 96% !important
+  }
+/* ===== Staff ACF Module END ===== */
 
-
-.staff-modal .content{
-  width: 96% !important
-
-}
-
-
- .container.supporter-logos {
+  .container.supporter-logos {
     width: 100% !important;
+  }
+  .site-footer ul{
+    padding-bottom: 40px;
+  }
 }
-.site-footer ul{
-       padding-bottom: 40px;
-}
-}
-
-
 
 .slideshow{
   width: 100%;
@@ -1683,30 +1699,23 @@ width: 1214px !important;
 
 @media all and (max-width: 1280px) {
 
-
   .staff-member img{
     width: 100%;
     height: auto;
   }
 
-#four{
-width: 96% !important;
+  #four{
+    width: 96% !important;
+  }
+
+  .half-width-content:nth-child(even) .half-width-area:last-child{
+    padding-left: 0;
+  }
+
+  .container.sm-two-col-container{
+    width: 96% !important;
+  }
 }
-
-
-.half-width-content:nth-child(even) .half-width-area:last-child{
-  padding-left: 0;
-}
-
-
-.container.sm-two-col-container{
-  width: 96% !important;
-}
-
-
-}
-
-
 
 @media only screen and (max-width: 1080px) {
 
@@ -2624,20 +2633,25 @@ margin-bottom:20px;font-weight: bold;
 }
 
 @media only screen and (max-width: 960px) {
-.supporter{
-  width: 50%;
-}
 
-.supporter a img {
-    height: 40px;
-}
+  .basic-page-content h1 {
+    font-size: 50px;
+  }
 
-.one-third .panel-info,
-.one-quarter .panel-info,
-.one-half .panel-info,
-.two-third .panel-info {
-    width: 80%;
-}
+  .supporter{
+    width: 50%;
+  }
+
+  .supporter a img {
+      height: 40px;
+  }
+
+  .one-third .panel-info,
+  .one-quarter .panel-info,
+  .one-half .panel-info,
+  .two-third .panel-info {
+      width: 80%;
+  }
 }
 
 
@@ -2672,3 +2686,9 @@ margin-bottom:20px;font-weight: bold;
     margin-top: 3px;
     margin-left: 5px;
 }
+
+@media only screen and (max-width: 400px) {
+
+  .basic-page-content h1 {
+    font-size: 35px;
+  }
