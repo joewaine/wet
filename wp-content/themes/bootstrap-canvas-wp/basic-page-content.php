@@ -2,11 +2,15 @@
 <?php
 $content = get_sub_field('content');
 
+if( get_row_layout() == 'staff_module' ):
+    $anchorSlug = get_sub_field('anchor_slug'); 
+endif;
+
 ?>
 
 <?php if($content){?>
 
-<section class="basic-page-content">
+<section <?php if($anchorSlug):?> id="<?php echo $anchorSlug ?>"<?php endif; ?> class="basic-page-content">
 <div class="container">
 <div class="col-sm-8">
 <?php the_sub_field('content'); ?>

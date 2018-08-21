@@ -1,4 +1,14 @@
-<section class="blog">
+<?php 
+
+if( get_row_layout() == 'blog_roll' ):
+
+    $anchorSlug = get_sub_field('anchor_slug'); 
+
+  endif;
+
+?>
+
+<section <?php if($anchorSlug):?> id="<?php echo $anchorSlug ?>"<?php endif; ?> class="blog">
 <div class="container">
 <div class="col-sm-8">
   <br>
@@ -25,10 +35,23 @@ wp_reset_postdata();?>
 </ul>
 </div>
 <div class="col-sm-4">
-<h1>categories</h1>
-<?php wp_list_categories(); ?>
-<h1>tags</h1>
-<?php get_tags(); ?>
+
+<ul class="cat-list">
+  <li class="top">
+    Filter By Category
+
+  </li>
+</ul>
+
+<?php if( have_rows('category_sidebar', 'option') ){ ?>
+    <?php while( have_rows('category_sidebar', 'option') ): the_row(); ?>
+
+
+
+<?php include 'category-repeater-logic.php'; ?>
+
+    <?php endwhile; ?>
+<?php } ?>
 </div>
 </div>
 </section>

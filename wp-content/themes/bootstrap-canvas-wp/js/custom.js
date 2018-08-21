@@ -9,7 +9,7 @@ function toggleResponsive() {
     if(menu.hasClass('responsive')){
         menu.slideDown('fast');
     } else {
-        menu.slideUp();
+        menu.slideUp('fast');
     }
 }
 

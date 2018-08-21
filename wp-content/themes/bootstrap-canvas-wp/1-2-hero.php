@@ -1,26 +1,127 @@
+<?php $one_two_hero = get_sub_field('1_2_hero'); ?>
+
+<?php if( $one_two_hero ){ ?>
+
+
+<?php if($one_two_hero['hide']){?>
+
+<div class="container front-page-modules" style="display:none;">
+
+<?php }else{ ?>
 <div class="container front-page-modules">
-<div class="one-third-two-third-headline">
-  <div class="one-third">
-<div class="panel-info">
-<h1>The Nether</h1>
-<h3>April 28th - May 14th 2018</h3>
-<p>Optional Description Paragraph Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining unchanged.
+<?php } ?>
+
+
+  <div id="<?php echo $one_two_hero['anchor_slug'] ?>" class="one-third" style="background: url(<?php echo $one_two_hero['image'] ?>) no-repeat center center;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;">
+<div class="panel-info <?php if($one_two_hero['black_text']){ ?>black-text<?php } ?>">
+<?php if($one_two_hero['header_link']){?>
+  <h1>
+  <a href="<?php echo $one_two_hero['header_link'] ?>"><?php echo $one_two_hero['header']; ?></a>
+  </h1>
+<?php }else{ ?>
+  <h1>
+      <?php echo $one_two_hero['header']; ?>
+  </h1>
+
+<?php } ?>
+
+<?php if($one_two_hero['date']){?>
+  <h3>
+    <?php echo $one_two_hero['date']; ?>
+  </h3>
+<?php } ?>
+
+
+<?php if($one_two_hero['description']){?>
+<p>
+  <?php echo $one_two_hero['description']; ?>
 </p>
-<button class="ticket-button">tickets</button>
+<?php } ?>
+
+<?php if($one_two_hero['cta_link']){?>
+
+<button class="ticket-button">
+  <a href="<?php echo $one_two_hero['cta_link'] ?>">
+<?php echo $one_two_hero['cta_text']; ?>
+  </a>
+</button>
+
+<?php } ?>
+
+
+
+
 </div>
   </div>
 
 
-  <div class="two-third">
-<div class="panel-info">
-<h1>The Nether</h1>
-<h3>April 28th - May 14th 2018</h3>
-<p>Optional Description Paragraph Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining unchanged.
+
+  <div class="two-third" style="background: url(<?php echo $one_two_hero['image_2'] ?>) no-repeat center center;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;">
+<div class="panel-info <?php if($one_two_hero['black_text_2']){ ?>black-text<?php } ?>">
+
+<?php if($one_two_hero['header_link_2']){?>
+  <h1>
+  <a href="<?php echo $one_two_hero['header_link_2'] ?>"><?php echo $one_two_hero['header_2']; ?></a>
+  </h1>
+<?php }else{ ?>
+  <h1>
+      <?php echo $one_two_hero['header_2']; ?>
+  </h1>
+
+<?php } ?>
+
+<?php if($one_two_hero['date_2']){?>
+  <h3>
+    <?php echo $one_two_hero['date_2']; ?>
+  </h3>
+<?php } ?>
+
+
+<?php if($one_two_hero['description_2']){?>
+<p>
+  <?php echo $one_two_hero['description_2']; ?>
 </p>
-<button class="ticket-button">tickets</button>
-</div>
-  </div>
+<?php } ?>
+
+<?php if($one_two_hero['cta_link_2']){?>
+
+<button class="ticket-button">
+  <a href="<?php echo $one_two_hero['cta_link_2'] ?>">
+<?php echo $one_two_hero['cta_text_2']; ?>
+  </a>
+</button>
+
+<?php } ?>
+
+</div></div>
+
+
+
+
+
+
 
 </div>
+<?php } ?>
 
-</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

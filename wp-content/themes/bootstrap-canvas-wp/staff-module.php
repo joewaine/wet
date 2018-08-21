@@ -1,4 +1,15 @@
-<div class="full-width-area centered-text-module staff-module">
+
+<?php 
+
+if( get_row_layout() == 'staff_module' ):
+
+    $anchorSlug = get_sub_field('anchor_slug'); 
+
+  endif;
+
+?>
+
+<div <?php if($anchorSlug):?> id="<?php echo $anchorSlug ?>"<?php endif; ?> class="full-width-area centered-text-module staff-module">
 
 <?php if(get_sub_field('header')){?>
 <div class="container text-center mb-extra">

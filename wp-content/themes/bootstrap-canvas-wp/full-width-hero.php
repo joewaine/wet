@@ -8,9 +8,9 @@ $full_width_hero = get_sub_field('full_width_hero');
   ?>
 
 <div class="container front-page-modules">
-<div class="full-width-headline" style="background: url(<?php echo $full_width_hero['image'] ?>);">
+<div id="<?php echo $full_width_hero['anchor_slug'] ?>" class="full-width-headline" style="background: url(<?php echo $full_width_hero['image'] ?>); no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
   <div class="full-width">
-<div class="panel-info">
+<div class="panel-info <?php if($full_width_hero['black_text']){ ?>black-text<?php } ?>">
 
 
 
