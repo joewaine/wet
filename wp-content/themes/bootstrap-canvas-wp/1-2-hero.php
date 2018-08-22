@@ -12,7 +12,7 @@
 <?php } ?>
 
 
-  <div id="<?php echo $one_two_hero['anchor_slug'] ?>" class="one-third" style="background: url(<?php echo $one_two_hero['image'] ?>) no-repeat center center;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;">
+  <div id="<?php echo $one_two_hero['anchor_slug'] ?>" class="one-third" style="background: url(<?php echo $one_two_hero['image'] ?>) no-repeat center center;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover; background-position: 50% 50%;">
 <div class="panel-info <?php if($one_two_hero['black_text']){ ?>black-text<?php } ?>">
 <?php if($one_two_hero['header_link']){?>
   <h1>
@@ -56,7 +56,7 @@
 
 
 
-  <div class="two-third" style="background: url(<?php echo $one_two_hero['image_2'] ?>) no-repeat center center;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;">
+  <div class="two-third" style="background: url(<?php echo $one_two_hero['image_2'] ?>) no-repeat center center;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover; background-position: 50% 50%;">
 <div class="panel-info <?php if($one_two_hero['black_text_2']){ ?>black-text<?php } ?>">
 
 <?php if($one_two_hero['header_link_2']){?>

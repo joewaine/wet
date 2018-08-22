@@ -69,7 +69,7 @@
     <nav id="site-navigation" class="navigation main-navigation" role="navigation">
       <div class="container">
         <a class="logo-link" href="<?php echo get_home_url() ?>">
-          <img class="wet-logo" src="<?php echo get_template_directory_uri() ?>/img/logo.jpg" alt="">
+          <img class="wet-logo" src="<?php echo get_template_directory_uri() ?>/img/logo.svg" alt="Washington Ensemble Theatre">
         </a>
         <a class="menu-toggle" href="javascript:void(0);" onclick="toggleResponsive()">&#9776;</a>
         <ul id="primary-menu" class="nav-menu">

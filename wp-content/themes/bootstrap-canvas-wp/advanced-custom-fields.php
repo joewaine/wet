@@ -1,7 +1,6 @@
 <?php
 // check if the flexible content field has rows of data
 if( have_rows('modules') ){
-
   // loop through the rows of data
   while ( have_rows('modules') ) : the_row();
     if( get_row_layout() == 'submenu' ){
@@ -24,6 +23,5 @@ if( have_rows('modules') ){
       include 'basic-page-content.php';
     }elseif( get_row_layout() == 'blog_roll'){
         include 'blog-roll-logic.php';
-
   } endwhile;
  } ?>

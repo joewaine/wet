@@ -160,22 +160,16 @@ $('body').on('click', '.collapse-bar', function() {
 
   $( function() {
     $( ".accordion" ).accordion({
-
- active: false,
-    collapsible: true,
-    heightStyle: "content"
-
+      active: false,
+      collapsible: true
     });
   } );
 
 
     $( function() {
     $( ".mobile-accordion" ).accordion({
-
- active: false,
-    collapsible: true,
-    header: "li.menu-item",
-heightStyle: "content"
+      active: false,
+      collapsible: true
     });
   } );
 
@@ -204,7 +198,29 @@ $(this).attr('src', $(this).attr('src').replace('.svg', '-black.svg'));
 });
 
 
+
+
+$('footer .nav-menu li a, nav #primary-menu li a').each(function(){
+
+
+if(window.location.href.indexOf($(this).text()) != -1){
+
+
+$(this).addClass('current');
+
+};
+
+
+
+
+
+});
+
+
+
+
 </script>
+
 
 
   </body>

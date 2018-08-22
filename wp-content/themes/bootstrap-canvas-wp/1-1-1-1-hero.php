@@ -11,7 +11,7 @@
 <div class="container front-page-modules">
 <?php } ?>
 <div class="four-quarters-headline">
-  <div id="<?php echo $one_one_one_one_hero['anchor_slug'] ?>" class="one-quarter" style="background: url(<?php echo $one_one_one_one_hero['image'] ?>) no-repeat center center;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;">
+  <div id="<?php echo $one_one_one_one_hero['anchor_slug'] ?>" class="one-quarter" style="background: url(<?php echo $one_one_one_one_hero['image'] ?>) no-repeat center center;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover; background-position: 50% 50%;">
 <div class="panel-info <?php if($one_one_one_one_hero['black_text']){ ?>black-text<?php } ?>">
 <?php if($one_one_one_one_hero['header_link']){?>
   <h1>
@@ -55,7 +55,7 @@
 
 
 
-  <div class="one-quarter" style="background: url(<?php echo $one_one_one_one_hero['image_2'] ?>) no-repeat center center;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;">
+  <div class="one-quarter" style="background: url(<?php echo $one_one_one_one_hero['image_2'] ?>) no-repeat center center;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover; background-position: 50% 50%;">
 <div class="panel-info <?php if($one_one_one_one_hero['black_text_2']){ ?>black-text<?php } ?>">">
 <?php if($one_one_one_one_hero['header_link_2']){?>
   <h1>
@@ -97,8 +97,8 @@
 
 
 
-  <div class="one-quarter" style="background: url(<?php echo $one_one_one_one_hero['image_3'] ?>) no-repeat center center;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;">
-<div class="panel-info <?php if($one_one_one_one_hero['black_text_3']){ ?>black-text<?php } ?>">">
+  <div class="one-quarter" style="background: url(<?php echo $one_one_one_one_hero['image_3'] ?>) no-repeat center center;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover; background-position: 50% 50%;">
+<div class="panel-info <?php if($one_one_one_one_hero['black_text_3']){ ?>black-text<?php } ?>">
 <?php if($one_one_one_one_hero['header_link_3']){?>
   <h1>
   <a href="<?php echo $one_one_one_one_hero['header_link_3'] ?>"><?php echo $one_one_one_one_hero['header_3']; ?></a>
@@ -136,11 +136,11 @@
 
 
 
-  <div class="one-quarter" style="background-image: url(<?php echo $one_one_one_one_hero['image_4'] ?>) no-repeat center center;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;">
-<div class="panel-info <?php if($one_one_one_one_hero['black_text_4']){ ?>black-text<?php } ?>">">
+  <div class="one-quarter" style="background: url(<?php echo $one_one_one_one_hero['image_4'] ?>) no-repeat center center;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover; background-position: 50% 50%;">
+<div class="panel-info <?php if($one_one_one_one_hero['black_text_4']){ ?>black-text<?php } ?>">
 <?php if($one_one_one_one_hero['header_link_4']){?>
   <h1>
-  <a href="<?php echo $one_one_one_one_hero['header_link_3'] ?>"><?php echo $one_one_one_one_hero['header_4']; ?></a>
+  <a href="<?php echo $one_one_one_one_hero['header_link_4'] ?>"><?php echo $one_one_one_one_hero['header_4']; ?></a>
   </h1>
 <?php }else{ ?>
   <h1>

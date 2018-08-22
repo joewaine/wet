@@ -18,7 +18,7 @@ $two_one_hero = get_sub_field('2_1_hero');
 
 
 
-  <div id="<?php echo $two_one_hero['anchor_slug'] ?>" class="two-third" style="background: url(<?php echo $two_one_hero['image'] ?>) no-repeat center center;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;">
+  <div id="<?php echo $two_one_hero['anchor_slug'] ?>" class="two-third" style="background: url(<?php echo $two_one_hero['image'] ?>) no-repeat center center;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover; background-position: 50% 50%;">
 <div class="panel-info <?php if($two_one_hero['black_text']){ ?>black-text<?php } ?>">
 
 
@@ -64,7 +64,7 @@ $two_one_hero = get_sub_field('2_1_hero');
 
 
 
-  <div class="one-third" style="background: url(<?php echo $two_one_hero['image_2'] ?>) no-repeat center center;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;">
+  <div class="one-third" style="background: url(<?php echo $two_one_hero['image_2'] ?>) no-repeat center center;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover; background-position: 50% 50%;">
 <div class="panel-info <?php if($two_one_hero['black_text_2']){ ?>black-text<?php } ?>">
 
 

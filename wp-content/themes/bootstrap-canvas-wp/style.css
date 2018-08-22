@@ -897,13 +897,13 @@ padding: 80px 55px;
 
 
 .id-nav{
-  border-width:1px 0;
-  list-style:none;
-  margin: 0;
-  padding:0;
-  text-align:center;
+    border-width:1px 0;
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align:center;
 }
-.id-nav li {
+.id-nav li{
     display:inline;
     margin-left: 40px;
     margin-right: 40px;
@@ -913,17 +913,24 @@ padding: 80px 55px;
     letter-spacing: 2px;
     font-family: 'Avenir LT Std 45 Book';
     text-transform: uppercase;
+
     vertical-align: sub;
     border-bottom: 1px solid #000;
     padding-bottom: 5px;
 
 }
 
+
+
+
 .id-nav li:hover,
 .id-nav li.active {
     border-bottom: 1px solid #fff;
     cursor: pointer;
 }
+
+
+
 
 .id-nav a {
     display:inline-block;
@@ -1855,19 +1862,8 @@ display: block;
   width: 100%;
 }
 
-.full-width.black {
-  padding-bottom: 15px;
-  margin-top: -14px;
-}
 
-.id-nav li {
-  display: block;
-  padding-bottom: 15px;
-}
 
-.id-nav li:hover, .id-nav li.active{
-  border-bottom: 1px solid #000;
-}
 
 .two-col-text .no-pad-lr p{
 
@@ -2331,7 +2327,7 @@ height: 600px;
   position: absolute;
   bottom: 30px;
   left: 20px;
-  width: 33.33%;
+  width: 66.66%;
 }
 
 
@@ -2811,4 +2807,3 @@ p.gray-text.gray-border{
   .basic-page-content h1 {
     font-size: 35px;
   }
-}
