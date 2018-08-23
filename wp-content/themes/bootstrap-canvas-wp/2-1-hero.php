@@ -7,12 +7,12 @@ $two_one_hero = get_sub_field('2_1_hero');
 
 <?php if($two_one_hero['hide']){?>
 
-<div class="container front-page-modules" style="display:none;">
+<div class="two-one-mod container front-page-modules" style="display:none;">
 
 
 <?php }else{ ?>
 
-<div class="container front-page-modules">
+<div class="two-one-mod container front-page-modules">
 
 <?php } ?>
 

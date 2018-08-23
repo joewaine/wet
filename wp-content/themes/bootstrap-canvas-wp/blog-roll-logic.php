@@ -9,7 +9,7 @@ if( get_row_layout() == 'blog_roll' ):
 ?>
 
 <section <?php if($anchorSlug):?> id="<?php echo $anchorSlug ?>"<?php endif; ?> class="blog">
-<div class="container">
+<div class="container blog-roll-mod">
 <div class="col-sm-8">
   <br>
 <ul class="blog-posts">

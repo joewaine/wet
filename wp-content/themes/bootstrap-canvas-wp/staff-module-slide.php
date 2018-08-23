@@ -3,8 +3,13 @@
 
 $staff_module = get_sub_field('staff_module');
 
+if( get_row_layout() == 'staff_module' ):
+   $anchorSlug = get_sub_field('anchor_slug'); 
+ endif;
+
+
 if( $staff_module ){?>
-<section class="staff-info">
+<section <?php if($anchorSlug):?>id="<?php echo $anchorSlug ?>" <?php endif; ?>class="staff-info">
 <div class="container staff-groupings">
 
 <?php

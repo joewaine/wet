@@ -1,7 +1,6 @@
 
 <?php
 $content = get_sub_field('content');
-
 if( get_row_layout() == 'staff_module' ):
     $anchorSlug = get_sub_field('anchor_slug'); 
 endif;
@@ -11,22 +10,17 @@ endif;
 <?php if($content){?>
 
 <section <?php if($anchorSlug):?> id="<?php echo $anchorSlug ?>"<?php endif; ?> class="basic-page-content">
-<div class="container">
-<div class="col-sm-8">
-<?php the_sub_field('content'); ?>
-
-
-
-<?php if( have_rows('accordion_repeater') ): ?>
-<div id="accordion">
-    <?php while( have_rows('accordion_repeater') ): the_row(); ?>
-      <?php include 'accordion-repeater-logic.php' ?>
-    <?php endwhile; ?>
-  </div>
-<?php endif; ?>
-
-</div>
-
+  <div class="container">
+    <div class="col-sm-8">
+      <?php the_sub_field('content'); ?>
+      <?php if( have_rows('accordion_repeater') ): ?>
+      <div id="accordion">
+          <?php while( have_rows('accordion_repeater') ): the_row(); ?>
+            <?php include 'accordion-repeater-logic.php' ?>
+          <?php endwhile; ?>
+        </div>
+      <?php endif; ?>
+    </div>
 
 <?php if(get_sub_field('sidebar_on_off')){ ?>
 <div class="col-sm-4 right-column-contact">

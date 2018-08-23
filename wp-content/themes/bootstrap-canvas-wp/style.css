@@ -36,7 +36,7 @@ body{
 h1.large-head{
   font-size: 72px;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
 
 h1{
@@ -168,7 +168,7 @@ a img.aligncenter {
 	.comment-list,
 	.children:nth-child(n+1) {
 		padding: 0;
-  	}
+  	}  
 }
 
 /* Text meant only for screen readers. */
@@ -377,14 +377,6 @@ a.menu-toggle {
     float: left;
     margin: 30px 30px 0 0;
 }
-
-
-
-
-
-
-
-
 
 /*joe waine styles*/
 
@@ -879,8 +871,6 @@ padding: 80px 55px;
   color: #fff;
 }
 
-
-
 .full-width.black{
   background: black;
   width: 100%;
@@ -919,9 +909,6 @@ padding: 80px 55px;
     padding-bottom: 5px;
 
 }
-
-
-
 
 .id-nav li:hover,
 .id-nav li.active {
@@ -970,9 +957,6 @@ padding: 80px 55px;
       padding: 40px 10px;
 
 }
-
-
-
 
 .slideshow{
   background-color: #253A8F;
@@ -2344,17 +2328,13 @@ height: 600px;
       margin-top: 8px;
 }
 
-.panel-info h1 a{
+.panel-info h1 a {
   color: #fff;
   text-transform: none;
   text-decoration: none;
+  line-height: 80px;
 }
 
-/*.panel-info h1 a,
-.panel-info h1{
-    line-height: 40px;
-    margin-bottom: 0;
-}*/
 
 .ticket-button{
     border-radius: 0;
@@ -2366,8 +2346,6 @@ height: 600px;
     margin-top: 4px;
 }
 
-
-
 .one-third .panel-info,
 .one-quarter .panel-info,
 .one-half .panel-info,
@@ -2375,14 +2353,11 @@ height: 600px;
   width: 66.66%;
 }
 
-
-
-.staff .col-sm-3:nth-child(even){
-background-color: pink;
-}
-
-.staff .col-sm-3:nth-child(odd){
-background-color: green;
+.one-third .panel-info h1 a,
+.one-quarter .panel-info h1 a,
+.one-half .panel-info h1 a,
+.two-third .panel-info h1 a {
+  line-height: 45px;
 }
 
 .staff .col-sm-3{
@@ -2393,7 +2368,6 @@ background-color: green;
 .employee-description{
   display: none;
 }
-
 
 .text-body{
   background-color: #fff;
@@ -2445,6 +2419,10 @@ background-color: green;
   padding: 30px 15px;
 }
 
+.basic-page-content a {
+  text-decoration: none;
+}
+
 
 .ui-accordion .ui-accordion-header,
 .ui-accordion .ui-accordion-header:focus{
@@ -2488,9 +2466,8 @@ background-color: green;
 
 
 
-.container.front-page-modules{
+.container.front-page-modules {
   background-color: #333;
-  /*margin-top: 130px;*/
 }
 
 
@@ -2535,27 +2512,11 @@ color: #979797;
   width: 90%;
 }
 
-
 .one-third,
 .one-half,
 .one-quarter,
 .two-third{
     width: 50%;
-  }
-
-
-.one-third:nth-child(odd),
-.one-half:nth-child(odd),
-.one-quarter:nth-child(odd),
-.two-third:nth-child(odd){
-background: pink;
-  }
-
-  .one-third:nth-child(even),
-.one-half:nth-child(even),
-.one-quarter:nth-child(even),
-.two-third:nth-child(even){
-background: green;
   }
 
 }
@@ -2570,8 +2531,11 @@ background: green;
   margin-bottom: 0;
 }
 
+.panel-info h1 a {
+  line-height: 40px;
+}
 
-  .one-third,
+.one-third,
 .one-half,
 .one-quarter,
 .two-third{
@@ -2769,6 +2733,22 @@ p.gray-text.gray-border{
 
 
 @media only screen and (max-width: 860px) {
+
+  .full-width.black {
+    margin-top: 0;
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+
+  .id-nav li {
+    display: block;
+    padding-bottom: 10px;
+  }
+
+  .id-nav li:hover, .id-nav li.active{
+    border-bottom: 1px solid #000;
+  }
+
   .social-links{
       float: left;
   }
@@ -2802,8 +2782,42 @@ p.gray-text.gray-border{
     margin-left: 5px;
 }
 
+@media screen and (max-width:782px) {
+
+    .full-width.black {
+      margin-top: -14px;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+
+    .panel-info h1 a {
+      line-height: 40px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+
+  #content-modules {
+    padding-top: 90px;
+  }
+}
+
 @media only screen and (max-width: 400px) {
 
   .basic-page-content h1 {
     font-size: 35px;
   }
+}
+
+@media only screen and (max-width: 375px) {
+
+  .panel-info h1 a, .panel-info h1.large-head a {
+    font-size: 30px;
+  }
+
+  #content-modules {
+    padding-top: 75px;
+  }
+}

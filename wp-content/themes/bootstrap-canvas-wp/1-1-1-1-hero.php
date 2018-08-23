@@ -5,10 +5,10 @@
 
 <?php if($one_one_one_one_hero['hide']){?>
 
-<div class="container front-page-modules" style="display:none;">
+<div class="one-one-one-one-mod container front-page-modules" style="display:none;">
 
 <?php }else{ ?>
-<div class="container front-page-modules">
+<div class="one-one-one-one-mod container front-page-modules">
 <?php } ?>
 <div class="four-quarters-headline">
   <div id="<?php echo $one_one_one_one_hero['anchor_slug'] ?>" class="one-quarter" style="background: url(<?php echo $one_one_one_one_hero['image'] ?>) no-repeat center center;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover; background-position: 50% 50%;">

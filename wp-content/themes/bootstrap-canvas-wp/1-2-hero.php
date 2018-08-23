@@ -5,10 +5,10 @@
 
 <?php if($one_two_hero['hide']){?>
 
-<div class="container front-page-modules" style="display:none;">
+<div class="one-two-mod container front-page-modules" style="display:none;">
 
 <?php }else{ ?>
-<div class="container front-page-modules">
+<div class="one-two-mod container front-page-modules">
 <?php } ?>
 
 
