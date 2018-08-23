@@ -95,51 +95,6 @@
     </nav><!-- #site-navigation -->
 <?php include 'advanced-custom-fields.php'; ?>
 
-<section style="display:none;">
-<div class="text-body">
-<div class="container">
-
-<div class="col-sm-8">
-
-<h1>header</h1>
-
-<p>Optional Description Paragraph Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining unchanged.</p>
-<p><button><a href="">hello</a></button><button><a href="">hello</a></button></p>
-
-<h1>header</h1>
-
-<p>Optional Description Paragraph Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining unchanged.</p>
-<p><button><a href="">hello</a></button><button><a href="">hello</a></button></p>
-
-
-
-    </div>
-
-
-<div class="col-sm-4">
-  <h4>Keep up with the ensemble</h4>
-  <button><a target="_blank" href="<?php the_field('mailing_list_link', 'option'); ?>">join our mailing list</a></button>
-  <h4>social media</h4>
-
-
-<?php if( have_rows('social_links', 'option') ): ?>
-<ul class="social-links">
-    <?php while( have_rows('social_links', 'option') ): the_row(); ?>
-      <?php include 'social-repeater-logic.php' ?>
-    <?php endwhile; ?>
-</ul>
-<?php endif; ?>
-
-
-
-    </div>
-
-
-
-  </div>
-</div>
-</section>
-
 
 
 

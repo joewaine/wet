@@ -25,15 +25,6 @@
       <div class="blog-post" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <!-- check if the post has a Post Thumbnail assigned to it. -->
 
-
-
-
-
-
-
-
-
-
         <?php if ( is_singular() && has_post_thumbnail() ) : ?>
         <?php the_post_thumbnail( 'full' ); ?>
         <?php elseif ( has_post_thumbnail() ) : ?>

@@ -427,20 +427,6 @@ a.menu-toggle {
   font-weight:  400;
 }
 
-
-
-
-
-
-
-
-/*add avenir black:*/
-/*add avenir black:*/
-/*add avenir black:*/
-
-
-
-
 @font-face {
   font-family: 'Avenir Black';
   src: url('fonts/avenir-std-black/AvenirLTStd-Black.eot'); /* IE9 Compat Modes */
@@ -453,31 +439,12 @@ a.menu-toggle {
   font-weight:  400;
 }
 
-
-/*add avenir black:*/
-/*add avenir black:*/
-/*add avenir black:*/
-
-
-
-
-
-
-
-/*fonts*/
-/*fonts*/
-/*fonts*/
-/*fonts*/
-
-
-body{
-  /*background: #253A8F;*/
-      font-family: "Avenir LT Std 55 Roman";
+body {
+  font-family: "Avenir LT Std 55 Roman";
   background: #fff;
-      margin-top: 130px;
+  margin-top: 130px;
+  overflow-x: hidden;
 }
-
-
 
 body.logged-in{
         margin-top: 98px;
@@ -1310,13 +1277,8 @@ p.resource-description.open-position-description{
   margin: 20px auto 36px;
 }
 
-
-
 .body-content .container{
-
-width: 100% !important;
-
-
+  width: 100% !important;
 }
 
 .person{
@@ -1553,12 +1515,6 @@ button.donate-button{
   display: block;
   clear: both;
 }
-
-
-.site-footer .container{
-  width: 96% !important;
-}
-
 
 }
 
@@ -2149,12 +2105,6 @@ form.wpcf7-form .half-width-fields input{
     margin-top: 10px;
 }
 
-
-body{
-  background: black;
-  overflow-x: hidden;
-}
-
 .social-links{
     float: right;
     clear: both;
@@ -2202,15 +2152,20 @@ height: 40px;
 }
 
 .supporter-links{
-    float: left;
-    clear: both;
-    margin-top: 30px;
+  float: left;
+  clear: both;
+  margin-top: 30px;
 }
 
 .site-footer .col-sm-4,
 .site-footer .container{
-    font-size: 16px;
-    line-height: 28px;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.site-footer .col-sm-8 {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 
@@ -2591,9 +2546,6 @@ display: none;
   margin-bottom: 30px;
 }
 
-
-
-
 button.btn.btn-default{
     background: black;
     color: white;
@@ -2607,22 +2559,14 @@ button.btn.btn-default{
     letter-spacing: 1px;
 }
 
-
-
-
 button a{
   color: #fff;
   letter-spacing: 1px;
 }
 
-
-.col-sm-8{
-  padding-left: 0;
-  padding-right: 0;
-}
-
 ul.blog-posts{
-  padding-left: 16px;
+  padding-left: 25px;
+  padding-top: 20px;
 }
 
 h1.blog-post-title{
@@ -2633,8 +2577,6 @@ h1.blog-post-title{
 h1.blog-post-title a{
   color: #000;
 }
-
-
 
 span.post-info{
   font-size: 24px;
@@ -2774,6 +2716,10 @@ p.gray-text.gray-border{
 
 .right-column-contact .social-links li {
     text-align: left;
+}
+
+.single-post .right-column-contact {
+  margin-top: 25px;
 }
 
 

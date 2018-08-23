@@ -12,17 +12,61 @@
  * @since Bootstrap Canvas WP 1.0
  */
 
-	get_header(); ?>
+get_header(); ?>
 
-      <div class="row">
+<div class="row">
+	<div class="container">
+  		<div class="col-sm-8">
+  			<?php if ( have_posts() ) : ?>
+  				<!-- Add the pagination functions here. -->
 
-        <div class="col-sm-12">
+  				<ul class="blog-posts">
+  					<!-- Start of the main loop. -->
+					<?php while ( have_posts() ) : the_post();  ?>
 
+				  <li>
+				    <?php the_post_thumbnail(); ?>
+				    <h1 class="blog-post-title">
+				    	<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+				    </h1>
+				    <br>
+					<span class="post-info"><?php the_date(); ?>&nbsp;<?php the_author();?></span>
+				    <br>
+				    <br>
+				    <?php the_excerpt(); ?>
+				    <br>
+				    <button><a href="<?php the_permalink(); ?>">READ MORE</a></button>
+				    <hr>
+				  </li>
+					<!-- the rest of your theme's main loop -->
 
-        </div><!-- /.blog-main -->
+					<?php endwhile; ?>
+					<!-- End of the main loop -->
+				</ul>
 
+				<div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
+				<div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
 
+			<?php else : ?>
+				<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+			<?php endif; ?>
+		</div><!-- /.col-sm-8 -->
 
-      </div><!-- /.row -->
+		<div class="col-sm-4 right-column-contact">
+			<ul class="cat-list">
+			  <li class="top">
+			    Filter By Category
+			  </li>
+			</ul>
 
-	<?php get_footer(); ?>
+			<?php if( have_rows('category_sidebar', 'option') ){ ?>
+			    <?php while( have_rows('category_sidebar', 'option') ): the_row(); ?>
+					<?php include 'category-repeater-logic.php'; ?>
+			    <?php endwhile; ?>
+			<?php } ?>
+			</div>
+		</div><!-- /.col-sm-4 -->
+	</div><!-- /.blog-main -->
+</div><!-- /.row -->
+
+<?php get_footer(); ?>
