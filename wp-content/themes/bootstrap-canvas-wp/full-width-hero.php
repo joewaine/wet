@@ -1,76 +1,55 @@
-
-
 <?php
 
-$full_width_hero = get_sub_field('full_width_hero');
+  $full_width_hero = get_sub_field('full_width_hero');
 
- if( $full_width_hero ){
-  ?>
+  if( !$full_width_hero ) {
+      return false;
+  }
+
+  $anchorSlug = $full_width_hero['anchor_slug'];
+  $img = $full_width_hero['image'];
+  $imgPos = $full_width_hero['image_position'];
+  $imgBackColor = ($full_width_hero['image_background_color']) ? $full_width_hero['image_background_color'] : '';
+  $blackText = ($full_width_hero['black_text']) ? ' black-text' : '';
+  $headerLink = $full_width_hero['header_link'];
+  $header = $full_width_hero['header'];
+  $date = $full_width_hero['date'];
+  $desc = $full_width_hero['description'];
+  $ctaLink = $full_width_hero['cta_link'];
+  $ctaText = $full_width_hero['cta_text'];
+?>
 
 <div class="full-width-mod container front-page-modules">
-<div id="<?php echo $full_width_hero['anchor_slug'] ?>" class="full-width-headline" style="background: url(<?php echo $full_width_hero['image'] ?>); no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; background-position: 50% 50%;">
-  <div class="full-width">
-<div class="panel-info <?php if($full_width_hero['black_text']){ ?>black-text<?php } ?>">
 
+  <!-- Hero Start -->
 
-
-
-
-<?php if($full_width_hero['header_link']){?>
-  <h1 class="large-head">
-  <a href="<?php echo $full_width_hero['header_link'] ?>"><?php echo $full_width_hero['header']; ?></a>
-  </h1>
-<?php }else{?>
-  <h1 class="large-head">
-      <?php echo $full_width_hero['header']; ?>
-  </h1>
-
-<?php } ?>
-
-<?php if($full_width_hero['date']){?>
-  <h3>
-    <?php echo $full_width_hero['date']; ?>
-  </h3>
-<?php } ?>
-
-
-<?php if($full_width_hero['description']){?>
-<p>
-  <?php echo $full_width_hero['description']; ?>
-</p>
-<?php } ?>
-
-<?php if($full_width_hero['cta_link']){?>
-
-<button class="ticket-button">
-  <a href="<?php echo $full_width_hero['cta_link'] ?>">
-<?php echo $full_width_hero['cta_text']; ?>
-  </a>
-</button>
-
-<?php } ?>
-
-
-
+  <div id="<?php echo $anchorSlug ?>" class="full-width-headline" <?php echo heroImageStyle($img, $imgPos, $imgBackColor); ?>>
+    <div class="full-width">
+      <div class="panel-info<?php echo $blackText1 ?>">
+        <h1 class="large-head">
+          <?php if($headerLink):?>
+            <a href="<?php echo $headerLink ?>">
+          <?php endif; ?>
+            <?php echo $header; ?>
+          <?php if($headerLink):?>
+            </a>
+          <?php endif; ?>
+        </h1>
+      <?php if($date):?>
+        <h3><?php echo $date; ?></h3>
+      <?php endif; ?>
+      <?php if($desc):?>
+        <p><?php echo $desc; ?></p>
+      <?php endif; ?>
+      <?php if($ctaLink):?>
+        <button class="ticket-button">
+          <a href="<?php echo $ctaLink ?>"><?php echo $ctaText; ?></a>
+        </button>
+      <?php endif; ?>
       </div>
     </div>
+
+    <!-- Hero End -->
+
   </div>
 </div>
-
-
-
-
-
-
-
-<?php } ?>
-
-
-
-
-
-
-
-
-
-

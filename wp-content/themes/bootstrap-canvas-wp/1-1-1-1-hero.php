@@ -1,175 +1,173 @@
-<?php $one_one_one_one_hero = get_sub_field('1_1_1_1_hero'); ?>
+<?php 
 
-<?php if( $one_one_one_one_hero ){ ?>
+  $one_one_one_one_hero = get_sub_field('1_1_1_1_hero'); 
+  if( !$one_one_one_one_hero ){
+    return false;
+  }
 
+  $anchorSlug = $one_one_one_one_hero['anchor_slug'];
+  $hide = $one_one_one_one_hero['hide'];
 
-<?php if($one_one_one_one_hero['hide']){?>
+  // Hero 1
+  $img1 = $one_one_one_one_hero['image'];
+  $imgPos1 = $one_one_one_one_hero['image_position_1'];
+  $imgBackColor1 = ($one_one_one_one_hero['image_background_color_1']) ? $one_one_one_one_hero['image_background_color_1'] : '';
+  $blackText1 = ($one_one_one_one_hero['black_text']) ? ' black-text' : '';
+  $headerLink1 = $one_one_one_one_hero['header_link'];
+  $header1 = $one_one_one_one_hero['header'];
+  $date1 = $one_one_one_one_hero['date'];
+  $desc1 = $one_one_one_one_hero['description'];
+  $ctaLink1 = $one_one_one_one_hero['cta_link'];
+  $ctaText1 = $one_one_one_one_hero['cta_text'];
 
-<div class="one-one-one-one-mod container front-page-modules" style="display:none;">
+  // Hero 2
+  $img2 = $one_one_one_one_hero['image_2'];
+  $imgPos2 = $one_one_one_one_hero['image_position_2'];
+  $imgBackColor2 = ($one_one_one_one_hero['image_background_color_2']) ? $one_one_one_one_hero['image_background_color_2'] : '';
+  $blackText2 = ($one_one_one_one_hero['black_text_2']) ? ' black-text' : '';
+  $headerLink2 = $one_one_one_one_hero['header_link_2'];
+  $header2 = $one_one_one_one_hero['header_2'];
+  $date2 = $one_one_one_one_hero['date_2'];
+  $desc2 = $one_one_one_one_hero['description_2'];
+  $ctaLink2 = $one_one_one_one_hero['cta_link_2'];
+  $ctaText2 = $one_one_one_one_hero['cta_text_2'];
 
-<?php }else{ ?>
-<div class="one-one-one-one-mod container front-page-modules">
-<?php } ?>
-<div class="four-quarters-headline">
-  <div id="<?php echo $one_one_one_one_hero['anchor_slug'] ?>" class="one-quarter" style="background: url(<?php echo $one_one_one_one_hero['image'] ?>) no-repeat center center;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover; background-position: 50% 50%;">
-<div class="panel-info <?php if($one_one_one_one_hero['black_text']){ ?>black-text<?php } ?>">
-<?php if($one_one_one_one_hero['header_link']){?>
-  <h1>
-  <a href="<?php echo $one_one_one_one_hero['header_link'] ?>"><?php echo $one_one_one_one_hero['header']; ?></a>
-  </h1>
-<?php }else{ ?>
-  <h1>
-      <?php echo $one_one_one_one_hero['header']; ?>
-  </h1>
+  // Hero 3
+  $img3 = $one_one_one_one_hero['image_3'];
+  $imgPos3 = $one_one_one_one_hero['image_position_3'];
+  $imgBackColor3 = ($one_one_one_one_hero['image_background_color_3']) ? $one_one_one_one_hero['image_background_color_3'] : '';
+  $blackText3 = ($one_one_one_one_hero['black_text_3']) ? ' black-text' : '';
+  $headerLink3 = $one_one_one_one_hero['header_link_3'];
+  $header3 = $one_one_one_one_hero['header_3'];
+  $date3 = $one_one_one_one_hero['date_3'];
+  $desc3 = $one_one_one_one_hero['description_3'];
+  $ctaLink3 = $one_one_one_one_hero['cta_link_3'];
+  $ctaText3 = $one_one_one_one_hero['cta_text_3'];
+  
+  // Hero 4
+  $img4 = $one_one_one_one_hero['image_4'];
+  $imgPos4 = $one_one_one_one_hero['image_position_4'];
+  $imgBackColor4 = ($one_one_one_one_hero['image_background_color_4']) ? $one_one_one_one_hero['image_background_color_4'] : '';
+  $blackText4 = ($one_one_one_one_hero['black_text_4']) ? ' black-text' : '';
+  $headerLink4 = $one_one_one_one_hero['header_link_4'];
+  $header4 = $one_one_one_one_hero['header_4'];
+  $date4 = $one_one_one_one_hero['date_4'];
+  $desc4 = $one_one_one_one_hero['description_4'];
+  $ctaLink4 = $one_one_one_one_hero['cta_link_4'];
+  $ctaText4 = $one_one_one_one_hero['cta_text_4'];
+?>
 
-<?php } ?>
+<div class="one-one-one-one-mod container front-page-modules" <?php if($hide): ?>style="display:none;"<?php endif; ?>>
+  <div class="four-quarters-headline">
+  <!-- Hero 1 Start -->
 
-<?php if($one_one_one_one_hero['date']){?>
-  <h3>
-    <?php echo $one_one_one_one_hero['date']; ?>
-  </h3>
-<?php } ?>
+    <div id="<?php echo $anchorSlug ?>" class="one-quarter" <?php echo heroImageStyle($img1, $imgPos1, $imgBackColor1); ?>>
+      <div class="panel-info<?php echo $blackText1 ?>">
+        <h1>
+          <?php if($headerLink1):?>
+            <a href="<?php echo $headerLink1 ?>">
+          <?php endif; ?>
+            <?php echo $header1; ?>
+          <?php if($headerLink1):?>
+            </a>
+          <?php endif; ?>
+        </h1>
+      <?php if($date1):?>
+        <h3><?php echo $date1; ?></h3>
+      <?php endif; ?>
+      <?php if($desc1):?>
+        <p><?php echo $desc1; ?></p>
+      <?php endif; ?>
+      <?php if($ctaLink1): ?>
+        <button class="ticket-button">
+          <a href="<?php echo $ctaLink1 ?>"><?php echo $ctaText1; ?></a>
+        </button>
+      <?php endif; ?>
+      </div>
+    </div>
 
+  <!-- Hero 1 End, Hero 2 Start -->
 
-<?php if($one_one_one_one_hero['description']){?>
-<p>
-  <?php echo $one_one_one_one_hero['description']; ?>
-</p>
-<?php } ?>
+    <div class="one-quarter" <?php echo heroImageStyle($img2, $imgPos2, $imgBackColor2); ?>>
+      <div class="panel-info<?php echo $blackText2 ?>">
+        <h1>
+          <?php if($headerLink2):?>
+            <a href="<?php echo $headerLink2 ?>">
+          <?php endif; ?>
+            <?php echo $header2; ?>
+          <?php if($headerLink2):?>
+            </a>
+          <?php endif; ?>
+        </h1>
+      <?php if($date2):?>
+        <h3><?php echo $date2; ?></h3>
+      <?php endif; ?>
+      <?php if($desc2):?>
+        <p><?php echo $desc2; ?></p>
+      <?php endif; ?>
+      <?php if($ctaLink2): ?>
+        <button class="ticket-button">
+          <a href="<?php echo $ctaLink2 ?>"><?php echo $ctaText2; ?></a>
+        </button>
+      <?php endif; ?>
+      </div>
+    </div>
 
-<?php if($one_one_one_one_hero['cta_link']){?>
+  <!-- Hero 2 End, Hero 3 Start -->
 
-<button class="ticket-button">
-  <a href="<?php echo $one_one_one_one_hero['cta_link'] ?>">
-<?php echo $one_one_one_one_hero['cta_text']; ?>
-  </a>
-</button>
+    <div class="one-quarter" <?php echo heroImageStyle($img3, $imgPos3, $imgBackColor3); ?>>
+      <div class="panel-info<?php echo $blackText3 ?>">
+      <h1>
+        <?php if($headerLink3):?>
+          <a href="<?php echo $headerLink3 ?>">
+        <?php endif; ?>
+          <?php echo $header3; ?>
+        <?php if($headerLink3):?>
+          </a>
+        <?php endif; ?>
+      </h1>
+      <?php if($date3):?>
+        <h3><?php echo $date3; ?></h3>
+      <?php endif; ?>
+      <?php if($desc3):?>
+        <p><?php echo $desc3; ?></p>
+      <?php endif; ?>
+      <?php if($ctaLink3): ?>
+        <button class="ticket-button">
+          <a href="<?php echo $ctaLink3 ?>"><?php echo $ctaText3; ?></a>
+        </button>
+      <?php endif; ?>
+      </div>
+    </div>
 
-<?php } ?>
+  <!-- Hero 3 End, Hero 4 Start -->
 
+    <div class="one-quarter" <?php echo heroImageStyle($img4, $imgPos4, $imgBackColor4); ?>>
+      <div class="panel-info<?php echo $blackText4 ?>">
+      <h1>
+        <?php if($headerLink4):?>
+          <a href="<?php echo $headerLink4 ?>">
+        <?php endif; ?>
+          <?php echo $header4; ?>
+        <?php if($headerLink4):?>
+          </a>
+        <?php endif; ?>
+      </h1>
+      <?php if($date4):?>
+        <h3><?php echo $date4; ?></h3>
+      <?php endif; ?>
+      <?php if($desc4):?>
+        <p><?php echo $desc4; ?></p>
+      <?php endif; ?>
+      <?php if($ctaLink4): ?>
+        <button class="ticket-button">
+          <a href="<?php echo $ctaLink4 ?>"><?php echo $ctaText4; ?></a>
+        </button>
+      <?php endif; ?>
+      </div>
+    </div>
 
+  <!-- Hero 4 End -->
 
-
-</div>
   </div>
-
-
-
-  <div class="one-quarter" style="background: url(<?php echo $one_one_one_one_hero['image_2'] ?>) no-repeat center center;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover; background-position: 50% 50%;">
-<div class="panel-info <?php if($one_one_one_one_hero['black_text_2']){ ?>black-text<?php } ?>">">
-<?php if($one_one_one_one_hero['header_link_2']){?>
-  <h1>
-  <a href="<?php echo $one_one_one_one_hero['header_link_2'] ?>"><?php echo $one_one_one_one_hero['header_2']; ?></a>
-  </h1>
-<?php }else{ ?>
-  <h1>
-      <?php echo $one_one_one_one_hero['header_2']; ?>
-  </h1>
-
-<?php } ?>
-
-<?php if($one_one_one_one_hero['date_2']){?>
-  <h3>
-    <?php echo $one_one_one_one_hero['date_2']; ?>
-  </h3>
-<?php } ?>
-
-
-<?php if($one_one_one_one_hero['description_2']){?>
-<p>
-  <?php echo $one_one_one_one_hero['description_2']; ?>
-</p>
-<?php } ?>
-
-<?php if($one_one_one_one_hero['cta_link_2']){?>
-
-<button class="ticket-button">
-  <a href="<?php echo $one_one_one_one_hero['cta_link_2'] ?>">
-<?php echo $one_one_one_one_hero['cta_text_2']; ?>
-  </a>
-</button>
-<?php } ?>
-</div></div>
-
-
-
-
-
-
-
-  <div class="one-quarter" style="background: url(<?php echo $one_one_one_one_hero['image_3'] ?>) no-repeat center center;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover; background-position: 50% 50%;">
-<div class="panel-info <?php if($one_one_one_one_hero['black_text_3']){ ?>black-text<?php } ?>">
-<?php if($one_one_one_one_hero['header_link_3']){?>
-  <h1>
-  <a href="<?php echo $one_one_one_one_hero['header_link_3'] ?>"><?php echo $one_one_one_one_hero['header_3']; ?></a>
-  </h1>
-<?php }else{ ?>
-  <h1>
-      <?php echo $one_one_one_one_hero['header_3']; ?>
-  </h1>
-
-<?php } ?>
-
-<?php if($one_one_one_one_hero['date_3']){?>
-  <h3>
-    <?php echo $one_one_one_one_hero['date_3']; ?>
-  </h3>
-<?php } ?>
-
-
-<?php if($one_one_one_one_hero['description_3']){?>
-<p>
-  <?php echo $one_one_one_one_hero['description_3']; ?>
-</p>
-<?php } ?>
-
-<?php if($one_one_one_one_hero['cta_link_3']){?>
-
-<button class="ticket-button">
-  <a href="<?php echo $one_one_one_one_hero['cta_link_3'] ?>">
-<?php echo $one_one_one_one_hero['cta_text_3']; ?>
-  </a>
-</button>
-<?php } ?>
-</div></div>
-
-
-
-
-  <div class="one-quarter" style="background: url(<?php echo $one_one_one_one_hero['image_4'] ?>) no-repeat center center;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover; background-position: 50% 50%;">
-<div class="panel-info <?php if($one_one_one_one_hero['black_text_4']){ ?>black-text<?php } ?>">
-<?php if($one_one_one_one_hero['header_link_4']){?>
-  <h1>
-  <a href="<?php echo $one_one_one_one_hero['header_link_4'] ?>"><?php echo $one_one_one_one_hero['header_4']; ?></a>
-  </h1>
-<?php }else{ ?>
-  <h1>
-      <?php echo $one_one_one_one_hero['header_4']; ?>
-  </h1>
-
-<?php } ?>
-
-<?php if($one_one_one_one_hero['date_4']){?>
-  <h3>
-    <?php echo $one_one_one_one_hero['date_4']; ?>
-  </h3>
-<?php } ?>
-
-
-<?php if($one_one_one_one_hero['description_4']){?>
-<p>
-  <?php echo $one_one_one_one_hero['description_4']; ?>
-</p>
-<?php } ?>
-
-<?php if($one_one_one_one_hero['cta_link_4']){?>
-
-<button class="ticket-button">
-  <a href="<?php echo $one_one_one_one_hero['cta_link_4'] ?>">
-<?php echo $one_one_one_one_hero['cta_text_4']; ?>
-  </a>
-</button>
-<?php } ?>
-</div></div>
-</div></div>
-<?php } ?>
+</div>
