@@ -23,6 +23,10 @@ get_header(); ?>
   				<ul class="blog-posts">
   					<!-- Start of the main loop. -->
 					<?php while ( have_posts() ) : the_post();  ?>
+						<?php 
+							// Get Custom Author from ACF field group Blog Post Options
+ 							$author = (get_fields()['custom_author']) ? get_fields()['custom_author'] : the_author();
+ 						?>
 
 				  <li>
 				    <?php the_post_thumbnail(); ?>
@@ -30,7 +34,7 @@ get_header(); ?>
 				    	<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 				    </h1>
 				    <br>
-					<span class="post-info"><?php the_date(); ?>&nbsp; <?php the_author();?></span>
+					<span class="post-info"><?php the_date(); ?>&nbsp; <?php echo $author;?></span>
 				    <br>
 				    <br>
 				    <?php the_excerpt(); ?>
