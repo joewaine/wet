@@ -1,21 +1,26 @@
 
 <?php
-$content = get_sub_field('content');
-if( get_row_layout() == 'staff_module' ):
-    $anchorSlug = get_sub_field('anchor_slug'); 
-endif;
 
+  $content = get_sub_field('content');
+
+  if( !$content ) {
+      return false;
+  }
+
+  $anchorSlug = get_sub_field('anchor_slug');
+  $sidebarOnOff = get_sub_field('sidebar_on_off');
+  $accordionHasRows = have_rows('accordion_repeater');
+  $textColor = get_sub_field('text_color');
+  $backColor = get_sub_field('background_color');
 ?>
 
-<?php if($content){?>
-
-<section <?php if($anchorSlug):?> id="<?php echo $anchorSlug ?>"<?php endif; ?> class="basic-page-content">
-  <div class="container">
+<section <?php if($anchorSlug):?> id="<?php echo $anchorSlug ?>"<?php endif; ?> class="basic-page-content" style="color: <?php echo $textColor?>">
+  <div class="container" style="background-color: <?php echo $backColor?>">
     <div class="col-sm-8">
-      <?php the_sub_field('content'); ?>
-      <?php if( have_rows('accordion_repeater') ): ?>
+      <?php echo $content; ?>
+      <?php if($accordionHasRows): ?>
       <div id="accordion">
-          <?php while( have_rows('accordion_repeater') ): the_row(); ?>
+          <?php while($accordionHasRows): the_row(); ?>
             <?php include 'accordion-repeater-logic.php' ?>
           <?php endwhile; ?>
         </div>
@@ -23,21 +28,8 @@ endif;
     </div>
 
 <?php if(get_sub_field('sidebar_on_off')){ ?>
-<div class="col-sm-4 right-column-contact">
-  <h4>Keep up with the ensemble</h4>
-  <button><a target="_blank" href="<?php the_field('mailing_list_link', 'option'); ?>">join our mailing list</a></button>
-  <h4>social media</h4>
-
-<?php if( have_rows('social_links', 'option') ): ?>
-<ul class="social-links right-bar">
-    <?php while( have_rows('social_links', 'option') ): the_row(); ?>
-      <?php include 'social-repeater-logic.php' ?>
-    <?php endwhile; ?>
-</ul>
-<?php endif; ?>
-    </div>
+  <?php include 'static-sidebar.php' ?>
 <?php } ?>
 
-</div>
+  </div>
 </section>
-<?php } ?>
