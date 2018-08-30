@@ -30,7 +30,7 @@ get_header(); ?>
 				    	<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 				    </h1>
 				    <br>
-					<span class="post-info"><?php the_date(); ?>&nbsp;<?php the_author();?></span>
+					<span class="post-info"><?php the_date(); ?>&nbsp; <?php the_author();?></span>
 				    <br>
 				    <br>
 				    <?php the_excerpt(); ?>
@@ -44,8 +44,6 @@ get_header(); ?>
 					<!-- End of the main loop -->
 				</ul>
 
-				<div class="nav-previous alignleft"><?php next_posts_link( 'Older posts' ); ?></div>
-				<div class="nav-next alignright"><?php previous_posts_link( 'Newer posts' ); ?></div>
 
 			<?php else : ?>
 				<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
@@ -68,5 +66,13 @@ get_header(); ?>
 		</div><!-- /.col-sm-4 -->
 	</div><!-- /.blog-main -->
 </div><!-- /.row -->
+<div class="row">
+	<div class="container blog-pagination">
+		<div class="col-sm-12">
+			<div class="nav-previous alignleft"><?php next_posts_link( 'Older Posts' ); ?></div>
+			<div class="nav-next alignright"><?php previous_posts_link( 'Newer Posts' ); ?></div>
+		</div>
+	</div>
+</div>
 
 <?php get_footer(); ?>

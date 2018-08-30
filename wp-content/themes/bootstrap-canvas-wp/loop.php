@@ -20,33 +20,45 @@
 	  <?php
 	  /* Start the Loop */
 	  if (have_posts()) : while (have_posts()) : the_post();
-	  $date_format = get_option( 'date_format' );
+	   $date_format = get_option( 'date_format' );
+     // Get fields from ACF field group Blog Post Options
+     $author = (get_fields()['custom_author']) ? get_fields()['custom_author'] : the_author();
 	  ?>
       <div class="blog-post" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <!-- check if the post has a Post Thumbnail assigned to it. -->
 
         <?php if ( is_singular() && has_post_thumbnail() ) : ?>
-        <?php the_post_thumbnail( 'full' ); ?>
+          <?php the_post_thumbnail( 'full' ); ?>
         <?php elseif ( has_post_thumbnail() ) : ?>
-        <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-        <?php the_post_thumbnail( 'thumbnail' ); ?>
-        </a>
+          <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+            <?php the_post_thumbnail( 'thumbnail' ); ?>
+          </a>
         <?php endif; ?>
         <?php if ( !is_singular() ) : ?>
-        <h2 class="blog-post-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php esc_attr_e( 'Permanent Link to ', 'bootstrapcanvaswp' ) . esc_attr( the_title_attribute() ); ?>">
-        <?php the_title(); ?></a></h2>
+        <h2 class="blog-post-title">
+          <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php esc_attr_e( 'Permanent Link to ', 'bootstrapcanvaswp' ) . esc_attr( the_title_attribute() ); ?>">
+            <?php the_title(); ?>
+          </a>
+        </h2>
         <?php else : ?>
-        <h2 class="blog-post-title"><?php the_title(); ?></a></h2>
+        <h2 class="blog-post-title"><?php the_title(); ?>
+          </a>
+        </h2>
         <?php endif; ?>
         <?php if ( !get_the_title() ) : ?>
-        <p class="blog-post-meta"><span class="glyphicon glyphicon-calendar"></span> <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php esc_attr_e( 'Permanent Link to ', 'bootstrapcanvaswp' ) . get_the_title() ? esc_attr( the_title_attribute() ) : esc_attr_e( '[No Title]', 'bootstrapcanvaswp' ); ?>"><?php the_time( $date_format ) ?></a> by <span class="glyphicon glyphicon-user"></span> <?php the_author_link() ?></p>
+        <p class="blog-post-meta">
+          <span class="glyphicon glyphicon-calendar"></span> 
+          <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php esc_attr_e( 'Permanent Link to ', 'bootstrapcanvaswp' ) . get_the_title() ? esc_attr( the_title_attribute() ) : esc_attr_e( '[No Title]', 'bootstrapcanvaswp' ); ?>"><?php the_time( $date_format ) ?></a> by <span class="glyphicon glyphicon-user"></span>
+        </p>
         <?php else : ?>
-        <p class="blog-post-meta"><span class="glyphicon glyphicon-calendar"></span> <?php the_time( $date_format ) ?> by <span class="glyphicon glyphicon-user"></span> <?php the_author_link() ?></p>
+        <p class="blog-post-meta">
+          <span class="glyphicon glyphicon-calendar"></span> <?php the_time( $date_format ) ?> by <span class="glyphicon glyphicon-user"></span>
+        </p>
         <?php endif; ?>
 
-<br>
+    <br>
 <span class="post-info">
-  <?php the_author(); ?> <?php the_date(); ?>
+  <?php echo $author; ?> <?php the_date(); ?>
 </span>
 <br><br>
         <?php

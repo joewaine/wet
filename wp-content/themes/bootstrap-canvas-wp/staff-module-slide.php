@@ -1,56 +1,44 @@
-
 <?php
+	
+  $staff_module = get_sub_field('staff_module');
 
-$staff_module = get_sub_field('staff_module');
+  if( !$staff_module ) {
+      return false;
+  }
 
-if( get_row_layout() == 'staff_module' ):
-   $anchorSlug = get_sub_field('anchor_slug'); 
- endif;
+  $anchorSlug = get_sub_field('anchor_slug');
 
+?>
 
-if( $staff_module ){?>
 <section <?php if($anchorSlug):?>id="<?php echo $anchorSlug ?>" <?php endif; ?>class="staff-info">
-<div class="container staff-groupings">
+	<div class="container staff-groupings">
 
-<?php
+	  <?php foreach ($staff_module as $member): ?>
 
-$arr = $staff_module;
-$i = 0;
-foreach ($arr as &$value) {?>
+	  	<?php
 
+	  		$firstName = $member['first_name'];
+	  		$lastName = $member['last_name'];
+	  		$image = $member['image'];
+	  		$imageMed = $image['sizes']['medium'];
+	  		$imageLarge = $image['sizes']['large'];
+	  		$title = $member['title'];
+	  		$desc = $member['description'];
 
-<div id="<?php echo $value['last_name']; ?>" class="staff-member" style="background: url(<?php echo str_replace(".jpg", "-683x1024.jpg", $value['image'] );  ?>) no-repeat center center; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+	  	?>
 
-<img src="<?php echo $value['image']; ?>" style="display:none;">
+		<div id="<?php echo $lastName; ?>" class="staff-member" <?php echo heroImageStyle($imageLarge); ?>>
+			<img src="<?php echo $imageLarge; ?>" style="display:none;"/>
+			<div class="info">
+				<h1 class="white staff-member-name gray-border"><?php echo $firstName; ?>&nbsp;<?php echo $lastName; ?></h1>
+				<span class="top-text"><?php echo $title; ?></span>
+				<span class="employee-description">
+					<p><?php echo $desc; ?></p>
+				</span>
+			</div>
+		</div>
 
+	  <?php endforeach;?>
 
-<img src="<?php echo str_replace(".jpg", "-333x500.jpg", $value['image'] );  ?>" style="display:none;">
-
-<div class="info"><h1 class="white staff-member-name gray-border">
-<?php echo $value['first_name']; ?>&nbsp;<?php echo $value['last_name']; ?>
-</h1>
-<span class="top-text">
-<?php echo $value['title']; ?>
-</span>
-<span class="employee-description"><p>
-<?php echo $value['description']; ?>
-</span></div></div>
-
-
-<?php $i++; }?>
-
-</div>
+	</div>
 </section>
-
-
-
-
-
-
-
-
-
-
-<?php } ?>
-
-

@@ -13,9 +13,9 @@
   $img1 = $two_half_hero['image'];
   $imgPos1 = $two_half_hero['image_position'];
   $imgBackColor1 = ($two_half_hero['image_background_color_1']) ? $two_half_hero['image_background_color_1'] : '';
-  $blackText1 = ($two_half_hero['black_text']) ? ' black-text' : '';
-  $headerLink1 = $two_half_hero['header_link'];
   $header1 = $two_half_hero['header'];
+  $headerLink1 = $two_half_hero['header_link'];
+  $headerColor1 = $two_half_hero['header_color_1'];
   $date1 = $two_half_hero['date'];
   $desc1 = $two_half_hero['description'];
   $ctaLink1 = $two_half_hero['cta_link'];
@@ -25,9 +25,9 @@
   $img2 = $two_half_hero['image_2'];
   $imgPos2 = $two_half_hero['image_position_2'];
   $imgBackColor2 = ($two_half_hero['image_background_color_2']) ? $two_half_hero['image_background_color_2'] : '';
-  $blackText2 = ($two_half_hero['black_text_2']) ? ' black-text' : '';
-  $headerLink2 = $two_half_hero['header_link_2'];
   $header2 = $two_half_hero['header_2'];
+  $headerLink2 = $two_half_hero['header_link_2'];
+  $headerColor2 = $two_half_hero['header_color_2'];
   $date2 = $two_half_hero['date_2'];
   $desc2 = $two_half_hero['description_2'];
   $ctaLink2 = $two_half_hero['cta_link_2'];
@@ -42,9 +42,9 @@
 
     <div id="<?php echo $anchorSlug ?>" class="one-half" <?php echo heroImageStyle($img1, $imgPos1, $imgBackColor1); ?>>
       <div class="panel-info<?php echo $blackText1 ?>">
-        <h1>
+        <h1 style="color: <?php echo $headerColor1; ?>">
           <?php if($headerLink1):?>
-            <a href="<?php echo $headerLink1 ?>">
+            <a href="<?php echo $headerLink1 ?>" style="color: <?php echo $headerColor1; ?>">
           <?php endif; ?>
             <?php echo $header1; ?>
           <?php if($headerLink1):?>
@@ -69,9 +69,9 @@
 
     <div class="one-half" <?php echo heroImageStyle($img2, $imgPos2, $imgBackColor2); ?>>
       <div class="panel-info<?php echo $blackText2 ?>">
-        <h1>
+        <h1 style="color: <?php echo $headerColor2; ?>">
           <?php if($headerLink2):?>
-            <a href="<?php echo $headerLink2 ?>">
+            <a href="<?php echo $headerLink2 ?>" style="color: <?php echo $headerColor2; ?>">
           <?php endif; ?>
             <?php echo $header2; ?>
           <?php if($headerLink2):?>

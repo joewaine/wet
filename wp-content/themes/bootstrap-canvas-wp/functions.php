@@ -1137,7 +1137,7 @@ if( function_exists('acf_add_options_page') ) {
 
 }
 
-function imagePosition($position){
+function imagePosition($imgPos){
 
 	// All image heros have background Image Position fields that assign a specific background-position value to their image(s). This function returns the desired background-position value based on the Image Position chosen in admin.
 
@@ -1153,14 +1153,14 @@ function imagePosition($position){
 		"mid_right_center" => "25% 50%"
 	];
 
-	return $backgroundPositions[$position];
+	$pos = ($imgPos) ? $backgroundPositions[$imgPos] : $backgroundPositions['absolute_center'];
+
+	return $pos;
 }
 
-function heroImageStyle($img, $imgPos, $imgBackColor = '') {
-	$backgroundPositionStyles = 'style="background: url(' . $img . ') no-repeat center center;';
+function heroImageStyle($img, $imgPos = '', $imgBackColor = '') {
+$backgroundPositionStyles = 'style="background: url(' . $img . ') no-repeat center center;';
 	$backgroundPositionStyles .= ($imgPos == 'full_width') ? '-webkit-background-size: contain;-moz-background-size: contain;-o-background-size: contain;background-size: contain; background-color: ' . $imgBackColor .';"' : '-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover; background-position: ' . imagePosition($imgPos) . ';"';
 
 	return $backgroundPositionStyles;
 }
-
-

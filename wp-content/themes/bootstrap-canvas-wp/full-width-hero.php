@@ -10,7 +10,7 @@
   $img = $full_width_hero['image'];
   $imgPos = $full_width_hero['image_position'];
   $imgBackColor = ($full_width_hero['image_background_color']) ? $full_width_hero['image_background_color'] : '';
-  $blackText = ($full_width_hero['black_text']) ? ' black-text' : '';
+  $headerColor = $full_width_hero['header_color'];
   $headerLink = $full_width_hero['header_link'];
   $header = $full_width_hero['header'];
   $date = $full_width_hero['date'];
@@ -25,10 +25,10 @@
 
   <div id="<?php echo $anchorSlug ?>" class="full-width-headline" <?php echo heroImageStyle($img, $imgPos, $imgBackColor); ?>>
     <div class="full-width">
-      <div class="panel-info<?php echo $blackText1 ?>">
-        <h1 class="large-head">
+      <div class="panel-info">
+        <h1 class="large-head" style="color: <?php echo $headerColor; ?>">
           <?php if($headerLink):?>
-            <a href="<?php echo $headerLink ?>">
+            <a href="<?php echo $headerLink ?>" style="color: <?php echo $headerColor; ?>">
           <?php endif; ?>
             <?php echo $header; ?>
           <?php if($headerLink):?>
