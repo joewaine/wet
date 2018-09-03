@@ -1,5 +1,8 @@
 <?php 
   $showContactForm = (get_fields()['show_contact_form']) ? get_fields()['show_contact_form'] : false; 
+  if(get_sub_field('show_contact_form') != false){
+    $showContactForm = true;
+  }
 ?>
 
 <div class="col-sm-4 static-sidebar">
