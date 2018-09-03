@@ -16,7 +16,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 /* =WordPress Core
 -------------------------------------------------------------- */
-
  hr {
      margin-top: 30px;
      margin-bottom: 30px;
@@ -180,10 +179,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
      padding-left: 10px;
      padding-right: 10px;
 }
- .nav-menu li:last-child{
-     padding-top: 0;
-     padding-right: 0;
-}
  .nav-menu > li > a {
      position: relative;
      display: inline-block;
@@ -197,12 +192,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
      color: #fff;
      text-decoration: none;
 }
-
  #primary-menu button.btn.btn-default{
      margin-top: 3px;
      margin-left: 5px;
 }
-
  a.menu-toggle {
      display: none;
 }
@@ -246,8 +239,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
          display: block;
          text-align: center;
     }
-     #primary-menu button.btn.btn-default, 
-     .nav-menu.responsive button.cta-button {
+     #primary-menu button.btn.btn-default, .nav-menu.responsive button.cta-button {
          width: 100%;
          margin: 0 auto;
     }
@@ -256,7 +248,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
      display: none;
      position: absolute;
      background-color: #f9f9f9;
-     width: 160px;
+     max-width: 200px;
      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
      list-style: none;
      padding: 0;
@@ -269,24 +261,30 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
  .sub-menu > li {
      position: relative;
+     width: 100%;
+     padding: 0;
 }
  .sub-menu > li > a {
      color: black;
      padding: 10px 15px;
      text-decoration: none;
      display: block;
-     width: 160px;
+     width: 100%;
 }
  .sub-menu > li > a:hover {
      background-color: #f1f1f1;
 }
- .menu-item-has-children:hover > .sub-menu {
-     display: block;
+ @media screen and (min-width:861px) {
+     #site-navigation .menu-item-has-children:hover > .sub-menu {
+         display: block;
+    }
 }
- @media screen and (max-width:768px) {
+ @media screen and (max-width:860px) {
      .sub-menu {
          position: relative;
          width: 100%;
+         margin: 0 auto;
+         max-width: none;
     }
      .sub-menu > li > a {
          width: 100%;
@@ -476,7 +474,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
  .header h1{
     /*font-family: 'Leafy';
-    */
+     */
      color: #FABD15;
      font-size: 64px;
      line-height: 72px;
@@ -484,7 +482,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
  .centered-text-module h2{
     /*font-family: 'Leafy';
-    */
+     */
      color: #253A8F;
      font-size: 48px;
      line-height: 56px;
@@ -711,7 +709,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
  .slideshow .owl-carousel{
     /*background: PINK;
-    */
+     */
      width: 1120px;
      margin: 0 auto;
 }
@@ -725,7 +723,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
  .container{
     /*padding-left: 0;
-    */
+     */
     /*pa*/
 }
  .container.supporter-logos {
@@ -760,12 +758,12 @@ Use it to make something cool, have fun, and share what you've learned with othe
      width: 860px !important;
      padding: 40px;
     /*min-height: 500px;
-    */
+     */
 }
  .left-mod-col{
      width: 40%;
     /*float: left;
-    */
+     */
      display: inline-block 
 }
  .right-mod-col{
@@ -793,7 +791,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
      line-height: 32px;
      margin-bottom: 30px;
     /*width: 76%;
-    */
+     */
      text-align: left;
      margin: 30px auto 16px;
      font-size: 16px;
@@ -828,7 +826,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
  .half-width-content:nth-child(odd) .half-width-area:last-child{
      float: left;
     /*background: pink;
-    */
+     */
 }
  .half-width-content:nth-child(even) .half-width-area:last-child{
      padding-left: 118px;
@@ -995,7 +993,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
  .staff-panel.resource-panel{
     /*background: #253A8F;
-    */
+     */
      padding-bottom: 22px;
 }
  .donation-item .staff-panel.resource-panel{
@@ -1040,8 +1038,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 /* target Internet Explorer 9 to undo the custom arrow */
  @media screen and (min-width:0\0) {
      select {
-         background:none\9;
-         padding: 5px\9;
+         background:none;
+         padding: 5px;
     }
 }
 /*select*/
@@ -1067,8 +1065,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
      margin-bottom: 10px;
 }
  .static-sidebar {
-    padding-top: 15px;
- }
+     padding-top: 15px;
+}
  .static-sidebar h4 {
      font-size: 20px;
      color: #000;
@@ -1080,9 +1078,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
      height: 2px;
      margin-left: 25px;
      margin-right: 25px;
- }
-
- .static-sidebar .sidebar-contact-form form.wpcf7-form {  
+}
+ .static-sidebar .sidebar-contact-form form.wpcf7-form {
      margin-bottom: 0;
 }
  .static-sidebar .sidebar-contact-form form.wpcf7-form p label {
@@ -1093,20 +1090,18 @@ Use it to make something cool, have fun, and share what you've learned with othe
  .static-sidebar .sidebar-contact-form div.wpcf7 {
      width: 90%;
      margin-left: 0;
- }
+}
  .static-sidebar .sidebar-contact-form div.wpcf7-response-output {
      margin: 0 auto;
- }
- .static-sidebar .sidebar-contact-form form.contact input,
- .static-sidebar .sidebar-contact-form form.wpcf7-form input,
- .static-sidebar .sidebar-contact-form form.wpcf7-form textarea {
+}
+ .static-sidebar .sidebar-contact-form form.contact input, .static-sidebar .sidebar-contact-form form.wpcf7-form input, .static-sidebar .sidebar-contact-form form.wpcf7-form textarea {
      border: 1px solid #000;
      border-radius: 0;
      font-size: 16px;
- }
+}
  .static-sidebar .sidebar-contact-form form.wpcf7-form p {
      margin: 0 auto;
- }
+}
  .static-sidebar .sidebar-contact-form input.wpcf7-form-control.wpcf7-submit {
      font-size: 16px;
      font-family: "Avenir LT Std 55 Roman";
@@ -1117,7 +1112,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
      border-radius: 0;
      background-color: #000;
      color: #fff;
- }
+}
  .cat-list li, .cat-list li a{
      color: #ccc;
      font-size: 24px;
@@ -1267,7 +1262,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
  .learn-more:hover{
      text-decoration: none;
 }
-
  @media only screen and (max-width: 860px) {
      .staff-modal .content{
          width: 96% !important 
@@ -1401,9 +1395,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
      .site-footer #primary-menu{
          display: none;
     }
-
-    .panel-info h1 {
-        line-height: 50px;
+     .panel-info h1 {
+         line-height: 50px;
     }
 }
  @media all and (max-width: 640px) {
@@ -1694,10 +1687,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
      margin-top: 8px;
      line-height: 35px;
 }
-
  .panel-info h1 {
      line-height: 80px;
- }
+}
  .panel-info h1 a {
      color: #fff;
      text-transform: none;
@@ -1706,7 +1698,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
  .panel-info p {
      line-height: 28px;
- }
+}
  .ticket-button{
      border-radius: 0;
      background-color: black;
@@ -1719,14 +1711,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
  .one-third .panel-info, .one-quarter .panel-info, .one-half .panel-info, .two-third .panel-info{
      width: 66.66%;
 }
- .one-third .panel-info h1,
- .one-third .panel-info h1 a, 
- .one-quarter .panel-info h1,
- .one-quarter .panel-info h1 a,
- .one-half .panel-info h1, 
- .one-half .panel-info h1 a,
- .two-third .panel-info h1, 
- .two-third .panel-info h1 a {
+ .one-third .panel-info h1, .one-third .panel-info h1 a, .one-quarter .panel-info h1, .one-quarter .panel-info h1 a, .one-half .panel-info h1, .one-half .panel-info h1 a, .two-third .panel-info h1, .two-third .panel-info h1 a {
      line-height: 45px;
 }
  .staff .col-sm-3{
@@ -1820,11 +1805,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
  .panel-info.black-text button a{
      color: #fff !important;
 }
-
-.ui-accordion .ui-accordion-content{
-        padding: 1em 0 !important;
+ .ui-accordion .ui-accordion-content{
+     padding: 1em 0 !important;
 }
-
  @media only screen and (max-width: 1280px) {
      .full-width .panel-info{
          width: 90%;
@@ -1832,8 +1815,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
      .one-third, .one-half, .one-quarter, .two-third{
          width: 50%;
     }
-
-    
 }
  @media only screen and (max-width: 960px) {
      .panel-info h1 a, .panel-info h1, .panel-info h1.large-head a, .panel-info h1.large-head{
@@ -1869,7 +1850,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
  .ui-widget {
      font-family: inherit !important;
 }
- 
  #comments, .blog-post-meta, #respond{
      display: none;
 }
@@ -1891,15 +1871,13 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
  .mailing-list-button {
      padding-right: 15px;
- }
- .mailing-list-button button.btn.btn-default,
- .mailing-list-button button.btn.btn-default a {
+}
+ .mailing-list-button button.btn.btn-default, .mailing-list-button button.btn.btn-default a {
      background: #fff;
      color: #000;
      float: right;
      clear: right;
- }
-
+}
  button a{
      color: #fff;
      letter-spacing: 1px;
@@ -1929,11 +1907,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
  .blog-pagination {
      padding: 0 25px;
      font-size: 20px;
- }
-
+}
  .blog-pagination a {
-    color: #000;
- }
+     color: #000;
+}
  .social-icon-white{
      width: 30px;
      height: 30px;
@@ -1947,12 +1924,12 @@ Use it to make something cool, have fun, and share what you've learned with othe
 }
  .ensemble{
      margin-bottom:20px;
-    font-weight: bold;
+     font-weight: bold;
 }
  .soc-med{
      margin-bottom:20px;
-    margin-top:26px;
-    font-weight: bold;
+     margin-top:26px;
+     font-weight: bold;
 }
  .top-text{
      display: none;
@@ -2007,44 +1984,40 @@ Use it to make something cool, have fun, and share what you've learned with othe
          margin-bottom: 30px;
     }
 }
-
-@media only screen and (max-width: 767px) {
-     .social-links,
-     .mailing-list-button button.btn.btn-default,
-     .footer-info {
+ @media only screen and (max-width: 767px) {
+     .social-links, .mailing-list-button button.btn.btn-default, .footer-info {
          float: none;
          width: 100%;
          display: block;
          text-align: center;
     }
      .mailing-list-button {
-        padding: 0 25px;
-     }
+         padding: 0 25px;
+    }
      .mailing-list-button button.btn.btn-default {
-        margin-top: 0;
-     }
+         margin-top: 0;
+    }
      .mailing-list-button button.btn.btn-default a {
-        float: none;
-        clear: none;
-     }
+         float: none;
+         clear: none;
+    }
      .static-sidebar {
-        width: 100%;
-        display: block;
-        padding: 15px;
-     }
+         width: 100%;
+         display: block;
+         padding: 15px;
+    }
      .static-sidebar h4 {
          margin-left: 25px;
-     }
+    }
      .static-sidebar .sidebar-contact-form div.wpcf7 {
          margin-left: inherit;
          padding: 0 25px;
          width: 100%;
-     }
+    }
      .static-sidebar .sidebar-contact-form hr.mobile-only {
          display: block;
-     }
- }
-
+    }
+}
  .right-column-contact .social-links{
      float: left;
      padding-left: 0;
@@ -2056,7 +2029,6 @@ Use it to make something cool, have fun, and share what you've learned with othe
  .single-post .right-column-contact {
      margin-top: 25px;
 }
-
  @media screen and (max-width:782px) {
      .full-width.black {
          margin-top: -14px;
@@ -2067,8 +2039,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
          line-height: 40px;
     }
      .ui-accordion .ui-accordion-header {
-        font-size: 30px !important;
-     }
+         font-size: 30px !important;
+    }
 }
  @media only screen and (max-width: 420px) {
      #content-modules {
@@ -2079,10 +2051,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
      .basic-page-content h1 {
          font-size: 35px;
     }
-
-    .ui-accordion .ui-accordion-header {
-        font-size: 25px !important;
-        line-height: 35px;
+     .ui-accordion .ui-accordion-header {
+         font-size: 25px !important;
+         line-height: 35px;
     }
 }
  @media only screen and (max-width: 375px) {

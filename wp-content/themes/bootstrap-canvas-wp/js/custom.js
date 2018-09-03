@@ -13,10 +13,41 @@ function toggleResponsive() {
     }
 }
 
-$( window ).resize(function() {
+function mobileCalc(){
   if ($(window).width() > 860) {
     if($('#primary-menu').css('display') == 'none'){
         $('#primary-menu').css('display', 'block');
     }
+    if($('body').hasClass('mobile')){
+        $('body').removeClass('mobile');
+    }
+  } else {
+    if(!$('body').hasClass('mobile')){
+        $('body').addClass('mobile');
+    } else {
+
+    }
   }
+}
+
+$(document).ready(function () {
+    mobileCalc();
+    $('body.mobile .main-navigation .menu-item-has-children > a').on('click touch', function(event){
+        event.preventDefault();
+        if($(this).siblings('.sub-menu').css('display') == 'block'){
+            $(this).siblings('.sub-menu').css('display', 'none');
+        } else if($(this).siblings('.sub-menu').css('display') == 'none') {
+            $(this).siblings('.sub-menu').css('display', 'block');
+        }  
+    });
 });
+
+
+$(window).resize(function() {
+    mobileCalc();
+});
+
+
+
+
+
