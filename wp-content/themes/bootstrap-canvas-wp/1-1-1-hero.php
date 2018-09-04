@@ -11,7 +11,6 @@
   // Hero 1
   $img1 = $one_one_one_hero['image'];
   $imgPos1 = $one_one_one_hero['image_position_1'];
-  $blackText1 = ($one_one_one_hero['black_text']) ? ' black-text' : '';
   $header1 = $one_one_one_hero['header'];
   $headerLink1 = $one_one_one_hero['header_link'];
   $headerColor1 = $one_one_one_hero['header_color_1'];
@@ -23,7 +22,6 @@
   // Hero 2
   $img2 = $one_one_one_hero['image_2'];
   $imgPos2 = $one_one_one_hero['image_position_2'];
-  $blackText2 = ($one_one_one_hero['black_text_2']) ? ' black-text' : '';
   $header2 = $one_one_one_hero['header_2'];
   $headerLink2 = $one_one_one_hero['header_link_2'];
   $headerColor2 = $one_one_one_hero['header_color_2'];
@@ -35,10 +33,9 @@
   // Hero 3
   $img3 = $one_one_one_hero['image_3'];
   $imgPos3 = $one_one_one_hero['image_position_3'];
-  $blackText3 = ($one_one_one_hero['black_text_3']) ? ' black-text' : '';
-  $header2 = $one_one_one_hero['header_3'];
-  $headerLink2 = $one_one_one_hero['header_link_3'];
-  $headerColor2 = $one_one_one_hero['header_color_3'];
+  $header3 = $one_one_one_hero['header_3'];
+  $headerLink3 = $one_one_one_hero['header_link_3'];
+  $headerColor3 = $one_one_one_hero['header_color_3'];
   $date3 = $one_one_one_hero['date_3'];
   $desc3 = $one_one_one_hero['description_3'];
   $ctaLink3 = $one_one_one_hero['cta_link_3'];
