@@ -16,7 +16,7 @@ get_header(); ?>
 
 <div class="row">
 	<div class="container">
-  		<div class="col-sm-8">
+  		<div class="col-sm-8 left-column-data">
   			<?php if ( have_posts() ) : ?>
   				<!-- Add the pagination functions here. -->
 

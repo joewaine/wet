@@ -157,8 +157,11 @@
       });
 
       $('footer .nav-menu li a, nav #primary-menu li a').each(function(){
-
-        if(window.location.href === $(this).attr('href')){
+        $currentLocation = window.location.href;
+        $clickedLocation = $(this).attr('href');
+        console.log('1: ' + $currentLocation, '2: ' + $clickedLocation);
+        $isClickedCurrent = $currentLocation.indexOf($clickedLocation) != -1;
+        if($isClickedCurrent){
           $(this).addClass('current');
         };
       });
