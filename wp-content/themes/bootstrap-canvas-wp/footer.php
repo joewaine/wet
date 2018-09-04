@@ -159,7 +159,6 @@
       $('footer .nav-menu li a, nav #primary-menu li a').each(function(){
         $currentLocation = window.location.href;
         $clickedLocation = $(this).attr('href');
-        console.log('1: ' + $currentLocation, '2: ' + $clickedLocation);
         $isClickedCurrent = $currentLocation.indexOf($clickedLocation) != -1;
         if($isClickedCurrent){
           $(this).addClass('current');
